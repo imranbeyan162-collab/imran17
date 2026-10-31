@@ -63,16 +63,25 @@ imran-portfolio/
 
 ---
 
-## 🚀 How to Open and Run
+## 🚀 How to Publish to GitHub & Vercel (`imran17.vercel.app`)
 
-You can view the website directly in any web browser by opening:
-```
-C:/Users/rjik/.gemini/antigravity/scratch/imran-portfolio/index.html
-```
+### Step 1: Create a Repository on GitHub
+1. Go to [github.com/new](https://github.com/new).
+2. Enter repository name: **`imran17`** (or `imran-portfolio`).
+3. Set visibility to **Public** and leave all checkboxes unchecked.
+4. Click **Create repository**.
 
-Or you can start a local lightweight web server with Python:
-```powershell
-cd C:\Users\rjik\.gemini\antigravity\scratch\imran-portfolio
-python -m http.server 8000
+### Step 2: Push Your Code
+Double-click `push_to_github.bat` inside this directory, or run in terminal:
+```cmd
+push_to_github.bat
 ```
-Then navigate to `http://localhost:8000` in your browser.
+*(Git will prompt you to authorize your GitHub account `imranbeyan162-collab` via your browser if not already authenticated)*.
+
+### Step 3: Publish as `imran17.vercel.app`
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account and click **Import** next to `imran17`.
+3. In **Project Name**, enter: **`imran17`**.
+4. Click **Deploy**.
+5. Your website will be live globally at **https://imran17.vercel.app**!
+
