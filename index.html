@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imran Beyan | AI Systems Engineer, Special STEM Student & Problem Solver</title>
+  <meta name="description" content="Personal portfolio of Imran Beyan - AI Engineer specializing in Python, PyTorch, LangChain, LangGraph, Computer Vision, SQL, Django, and Mathematical Problem Solving." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              peach: '#FF9E80',
+              terracotta: '#E26D5C',
+              coral: '#E76F51',
+              sand: '#FAF5F0',
+              dark: '#161311',
+              cardDark: '#1E1A17'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- FontAwesome Icons for clean social marks -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="relative min-h-screen selection:bg-orange-200 selection:text-orange-900">
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Top Navigation (Inspired by Reference 1: alexmorgan.design) -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/70 dark:bg-stone-900/70 border-b border-orange-500/10 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-1.5 group">
+        <span class="font-heading font-extrabold text-2xl tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-orange-600 transition-colors">IB</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600 dark:text-stone-300">
+        <a href="#work" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Work</a>
+        <a href="#about" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Skills</a>
+        <a href="#agent-lab" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors flex items-center gap-1.5">
+          <span>AI Lab</span>
+          <span class="px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400">Live</span>
+        </a>
+        <a href="#gallery" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Gallery</a>
+        <a href="#contact" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Let's Talk CTA -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-200 dark:border-stone-700 bg-white/60 dark:bg-stone-800/60 hover:bg-white dark:hover:bg-stone-700 transition-all shadow-sm">
+          <span id="theme-icon">
+            <i class="fa-solid fa-moon text-stone-700 dark:text-amber-300"></i>
+          </span>
+        </button>
+
+        <!-- Pill CTA Button (Exact match from reference) -->
+        <a href="#contact" class="btn-terracotta hidden sm:inline-flex text-sm py-2.5 px-6">
+          <span>Let's talk</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Open Navigation" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-stone-200/60 dark:bg-stone-800/60 text-stone-800 dark:text-stone-200">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Modal -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-stone-900/80 backdrop-blur-lg hidden flex flex-col justify-center items-center px-8 text-center">
+    <button id="mobile-menu-close" aria-label="Close Navigation" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-stone-800 text-stone-200 flex items-center justify-center text-xl">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="flex flex-col gap-6 text-2xl font-heading font-semibold text-stone-100">
+      <a href="#work" class="mobile-nav-link hover:text-orange-400">Work</a>
+      <a href="#about" class="mobile-nav-link hover:text-orange-400">About Me</a>
+      <a href="#skills" class="mobile-nav-link hover:text-orange-400">Technical Skills</a>
+      <a href="#agent-lab" class="mobile-nav-link hover:text-orange-400">Interactive AI Lab</a>
+      <a href="#gallery" class="mobile-nav-link hover:text-orange-400">Photo Gallery</a>
+      <a href="#contact" class="mobile-nav-link hover:text-orange-400">Contact</a>
+    </div>
+    <div class="mt-8 flex gap-5 text-2xl text-stone-300">
+      <a href="https://github.com/imranbeyan162-collab" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/BeyanImran57496" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://youtube.com/@techwithimran17" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (Recreating Reference 1 Layout with Imran's Photo & Profile) -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 z-10">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 dark:bg-orange-950/50 border border-orange-300/40 text-orange-700 dark:text-orange-300 text-xs font-semibold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
+            Special School STEM Student & AI Researcher
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading text-stone-900 dark:text-stone-50 leading-[1.08] tracking-tight">
+            Hi, I'm <br />
+            <span class="text-orange-600 dark:text-orange-400 font-extrabold">Imran Beyan.</span>
+          </h1>
+
+          <!-- Role Subtitle -->
+          <div class="text-xl md:text-2xl font-semibold text-stone-700 dark:text-stone-300">
+            Autonomous AI Systems & Computer Vision Engineer
+          </div>
+
+          <!-- Bio Paragraph -->
+          <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-xl leading-relaxed">
+            Special school student deeply passionate about mathematics and complex problem-solving. Building intelligent agents with <span class="font-semibold text-stone-900 dark:text-stone-100">LangChain</span> & <span class="font-semibold text-stone-900 dark:text-stone-100">LangGraph</span>, deep neural networks with <span class="font-semibold text-stone-900 dark:text-stone-100">PyTorch</span>, and production platforms with <span class="font-semibold text-stone-900 dark:text-stone-100">Django & SQL</span>.
+          </p>
+
+          <!-- Action Buttons (Exact style from Reference 1) -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#work" class="btn-terracotta">
+              <span>View my work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#about" class="btn-outline-pill">
+              <span>About me</span>
+              <i class="fa-regular fa-user text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Portrait Switcher Pills (Interactive feature) -->
+          <div class="pt-6 border-t border-orange-500/15 flex items-center gap-3">
+            <span class="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">Switch Avatar:</span>
+            <div class="flex items-center gap-2">
+              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border-2 border-orange-500 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-hero.png" title="Hero Portrait">
+                <img src="assets/images/imran-hero.png" alt="Hero Portrait" class="w-full h-full object-cover" />
+              </button>
+              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-about.png" title="Casual Pose">
+                <img src="assets/images/imran-about.png" alt="Casual Pose" class="w-full h-full object-cover" />
+              </button>
+              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p1.png" title="Purple Shirt">
+                <img src="assets/images/imran-p1.png" alt="Purple Shirt" class="w-full h-full object-cover" />
+              </button>
+              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p2.jpg" title="Jersey Portrait">
+                <img src="assets/images/imran-p2.jpg" alt="Jersey Portrait" class="w-full h-full object-cover" />
+              </button>
+              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p3.png" title="Collared Blue">
+                <img src="assets/images/imran-p3.png" alt="Collared Blue" class="w-full h-full object-cover" />
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual: Circular Portrait & Floating Glass Badge (Recreating Reference 1) -->
+        <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+          
+          <div class="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px]">
+            
+            <!-- Radial Glow Backing (Matches Reference 1's soft peach halo) -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-orange-400/40 via-rose-300/30 to-amber-200/40 rounded-full blur-2xl transform scale-105"></div>
+
+            <!-- Circular Portrait Frame -->
+            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white/80 dark:border-stone-700/80 shadow-2xl z-0 bg-stone-100">
+              <img id="hero-portrait" src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" />
+            </div>
+
+            <!-- Floating Frosted Glass Card (Exact reproduction from Reference 1) -->
+            <div class="floating-status-card">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="pulse-dot"></span>
+                <span class="text-xs font-semibold text-stone-700 dark:text-stone-300">Available for collaborations</span>
+              </div>
+              <p class="text-xs text-stone-500 dark:text-stone-400 leading-snug mb-3">
+                Building multi-agent autonomous architectures & mathematical AI solvers.
+              </p>
+              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-orange-400 hover:underline">
+                <span>View LinkedIn Profile</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRUSTED SKILLS & TECHNOLOGIES RIBBON (Matching "Trusted by" in Reference 1) -->
+    <section class="py-12 border-y border-orange-500/10 bg-white/40 dark:bg-stone-900/30 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500">Core Engineering Arsenal</span>
+        </div>
+        <div class="tech-ribbon">
+          <div class="tech-item"><i class="fa-brands fa-python text-blue-500 text-lg"></i><span>Python</span></div>
+          <div class="tech-item"><i class="fa-solid fa-brain text-orange-500 text-lg"></i><span>PyTorch</span></div>
+          <div class="tech-item"><i class="fa-solid fa-robot text-emerald-500 text-lg"></i><span>LangGraph & LangChain</span></div>
+          <div class="tech-item"><i class="fa-solid fa-eye text-cyan-500 text-lg"></i><span>Computer Vision</span></div>
+          <div class="tech-item"><i class="fa-solid fa-cube text-indigo-500 text-lg"></i><span>Django</span></div>
+          <div class="tech-item"><i class="fa-solid fa-database text-amber-500 text-lg"></i><span>SQL</span></div>
+          <div class="tech-item"><i class="fa-solid fa-square-root-variable text-rose-500 text-lg"></i><span>Advanced Mathematics</span></div>
+          <div class="tech-item"><i class="fa-brands fa-js text-yellow-500 text-lg"></i><span>JavaScript</span></div>
+          <div class="tech-item"><i class="fa-solid fa-chart-line text-purple-500 text-lg"></i><span>Scikit-learn</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK / PROJECTS (Matching Reference 1 Card Grid Layout) -->
+    <section id="work" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">SELECTED WORK</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+            Designing intelligent systems <br class="hidden sm:inline" />that solve hard problems.
+          </h2>
+        </div>
+        <a href="https://github.com/imranbeyan162-collab" target="_blank" class="btn-outline-pill self-start md:self-auto text-sm">
+          <span>View all on GitHub</span>
+          <i class="fa-brands fa-github text-base"></i>
+        </a>
+      </div>
+
+      <!-- Projects 3-Card Responsive Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project Card 1: LangGraph Multi-Agent Architecture -->
+        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-orange-100 to-rose-100 dark:from-stone-800 dark:to-orange-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-orange-600 dark:text-orange-400 shadow-sm">AI Agents</span>
+                <i class="fa-solid fa-diagram-project text-stone-400"></i>
+              </div>
+              <!-- Simulated Graph Nodes -->
+              <div class="flex items-center justify-around py-4 z-10">
+                <div class="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-md flex items-center justify-center font-mono text-xs text-orange-600 font-bold border border-orange-200">Plan</div>
+                <div class="h-0.5 w-8 bg-orange-400"></div>
+                <div class="w-12 h-12 rounded-xl bg-orange-500 text-white shadow-md flex items-center justify-center font-mono text-xs font-bold">Tool</div>
+                <div class="h-0.5 w-8 bg-orange-400"></div>
+                <div class="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-md flex items-center justify-center font-mono text-xs text-emerald-600 font-bold border border-emerald-200">Eval</div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span>LangGraph State Graph Engine</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
+              Multi-Agent Autonomous Orchestrator
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Cyclic multi-agent architecture built with LangGraph & LangChain. Employs autonomous task decomposition, persistent memory checkpoints, dynamic tool routing, and automated self-reflection.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Python • LangGraph • LangChain</span>
+            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Card 2: PyTorch Real-Time Computer Vision Pipeline -->
+        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-stone-800 dark:to-amber-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-amber-600 dark:text-amber-400 shadow-sm">Computer Vision</span>
+                <i class="fa-solid fa-camera text-stone-400"></i>
+              </div>
+              <!-- Simulated Bounding Boxes -->
+              <div class="relative h-24 w-full flex items-center justify-center">
+                <div class="w-32 h-20 border-2 border-dashed border-amber-500 rounded-lg bg-amber-500/10 flex items-start justify-between p-1.5">
+                  <span class="text-[9px] font-mono bg-amber-500 text-white px-1 rounded">Target: 99.4%</span>
+                  <span class="text-[9px] font-mono text-amber-600">60 FPS</span>
+                </div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span>PyTorch Custom CNN & Inference</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
+              Neural Computer Vision & Perception
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Deep convolutional neural network trained on PyTorch for high-speed spatial object detection, edge feature extraction, and real-time bounding box tracking with OpenCV.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">PyTorch • OpenCV • Scikit-learn</span>
+            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Intelligent Full-Stack Django & SQL Engine -->
+        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-100 dark:from-stone-800 dark:to-rose-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-rose-600 dark:text-rose-400 shadow-sm">Full-Stack & SQL</span>
+                <i class="fa-solid fa-server text-stone-400"></i>
+              </div>
+              <!-- Simulated Database schema -->
+              <div class="space-y-1.5 z-10 font-mono text-[10px] text-stone-700 dark:text-stone-300">
+                <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
+                  <span>SELECT * FROM agents</span>
+                  <span class="text-emerald-500 font-bold">200 OK</span>
+                </div>
+                <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
+                  <span>JOIN telemetry ON id</span>
+                  <span class="text-orange-500">2.1ms</span>
+                </div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                <span>Django REST + Relational SQL</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
+              Scalable Intelligence Web Platform
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Enterprise-grade Django architecture powered by optimized SQL schemas, indexed joins, and REST APIs communicating seamlessly with reactive JavaScript frontends.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Django • SQL • JS • HTML/CSS</span>
+            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INTERACTIVE AI AGENT & MATH LAB (What makes this website truly special!) -->
+    <section id="agent-lab" class="py-20 bg-stone-100/60 dark:bg-stone-900/50 border-y border-orange-500/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">INTERACTIVE AI & PROBLEM SOLVING LAB</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+            See How My Agents Think & Execute
+          </h2>
+          <p class="text-stone-600 dark:text-stone-400 mt-3 text-sm sm:text-base">
+            Test live simulated LangGraph agent decision-making workflows and algorithmic math solvers directly in your browser.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Left: LangGraph Interactive Execution Flow -->
+          <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                  <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">LangGraph Execution Flow</h3>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                  <label for="agent-workflow-select" class="text-xs font-semibold text-stone-500">Preset:</label>
+                  <select id="agent-workflow-select" class="text-xs font-medium rounded-lg bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-2.5 py-1.5 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-1 focus:ring-orange-500">
+                    <option value="math">Mathematical Proof & Eigenvalues</option>
+                    <option value="vision">Computer Vision Edge Stream</option>
+                    <option value="agentic">Database SQL Multi-Agent Query</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Interactive Node Graph Visual -->
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 mb-6 text-center">
+                <div class="agent-step-node agent-node">
+                  <div class="text-xs font-bold text-orange-600">01. Ingest</div>
+                  <div class="text-[11px] text-stone-500">User Query</div>
+                </div>
+                <div class="agent-step-node agent-node">
+                  <div class="text-xs font-bold text-orange-600">02. Plan</div>
+                  <div class="text-[11px] text-stone-500">LangChain</div>
+                </div>
+                <div class="agent-step-node agent-node">
+                  <div class="text-xs font-bold text-orange-600">03. Tool</div>
+                  <div class="text-[11px] text-stone-500">Py/PyTorch</div>
+                </div>
+                <div class="agent-step-node agent-node">
+                  <div class="text-xs font-bold text-orange-600">04. Critic</div>
+                  <div class="text-[11px] text-stone-500">Reflection</div>
+                </div>
+                <div class="agent-step-node agent-node col-span-2 sm:col-span-1">
+                  <div class="text-xs font-bold text-emerald-600">05. Output</div>
+                  <div class="text-[11px] text-stone-500">Final State</div>
+                </div>
+              </div>
+
+              <!-- Terminal Output Stream -->
+              <div class="rounded-2xl bg-stone-950 p-4 font-mono text-stone-300 text-xs h-48 overflow-y-auto space-y-2 border border-stone-800" id="agent-logs">
+                <div class="text-stone-500 italic">Select a workflow above and click "Run Agent Graph" to inspect the live execution trace...</div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+              <button id="run-agent-btn" class="btn-terracotta text-sm py-2 px-5">
+                <span>▶ Run Agent Graph</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Mathematical Problem Solving Demo -->
+          <div class="lg:col-span-5 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-square-root-variable text-orange-500 text-lg"></i>
+                <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Special Math & Problem Solver</h3>
+              </div>
+
+              <p class="text-xs text-stone-600 dark:text-stone-400 mb-4 leading-relaxed">
+                As a student in a school for gifted minds, mathematics forms the bedrock of my engineering approach. Test algorithmic solutions below:
+              </p>
+
+              <div class="space-y-3 mb-4">
+                <label for="problem-type" class="text-xs font-semibold text-stone-700 dark:text-stone-300 block">Select Mathematical Problem:</label>
+                <select id="problem-type" class="w-full text-xs font-medium rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 p-2.5 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-1 focus:ring-orange-500">
+                  <option value="quad">Quadratic Roots & Extremum Discovery</option>
+                  <option value="fib">Fast Matrix Exponentiation Fibonacci O(log n)</option>
+                  <option value="vision_filter">Computer Vision Sobel 3x3 Edge Kernel</option>
+                </select>
+              </div>
+
+              <div id="math-result" class="p-4 rounded-2xl bg-white/80 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 min-h-[140px] flex items-center justify-center text-center">
+                <span class="text-xs text-stone-400">Click "Solve Equation" to compute step-by-step breakdown.</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+              <button id="math-solve-btn" class="btn-outline-pill text-sm py-2 px-5">
+                <span>Solve Equation</span>
+                <i class="fa-solid fa-calculator text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME & JOURNEY (Incorporating Reference 2 style metrics & bio) -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Styled Portrait with Decorative Badges -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 dark:border-stone-800 aspect-[4/5] bg-stone-200">
+            <img src="assets/images/imran-about.png" alt="Imran Beyan" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <div class="text-xs font-mono uppercase tracking-wider text-orange-400 font-bold mb-1">Passionate Thinker</div>
+              <div class="font-heading font-bold text-xl">Imran Beyan</div>
+              <p class="text-xs text-stone-300">Turning curiosity and mathematics into code.</p>
+            </div>
+          </div>
+
+          <!-- Highlight Metric Badge (Reference 2 style) -->
+          <div class="absolute -top-4 -right-4 glass-panel rounded-2xl p-4 shadow-xl border border-white/90">
+            <div class="text-2xl font-extrabold font-heading text-orange-600 dark:text-orange-400">100%</div>
+            <div class="text-[11px] font-semibold text-stone-600 dark:text-stone-300">Problem Dedication</div>
+          </div>
+        </div>
+
+        <!-- Right: Story, Values & Skills breakdown -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">ABOUT ME</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+              Special school student with a deep passion for mathematics & autonomous intelligence.
+            </h2>
+          </div>
+
+          <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
+            I am a student at a specialized school for gifted problem-solvers. What drives me every day is the elegance of mathematics and the immense frontier of Artificial Intelligence. I don't just write code — I seek first-principles understanding: from the calculus under gradient descent to cyclic agent graphs that reason about human intent.
+          </p>
+
+          <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
+            Over the past years, I have engineered neural models with PyTorch, built computer vision pipelines that process real-time streams, orchestrated multi-agent reasoning chains using LangChain & LangGraph, and engineered resilient database-backed web architectures using Django and SQL.
+          </p>
+
+          <!-- Stat Counters (Reference 2 style) -->
+          <div class="grid grid-cols-3 gap-4 py-4 border-y border-stone-200/60 dark:border-stone-800/80">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">5+</div>
+              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">Core Tech Stacks</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">100+</div>
+              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">Problems Solved</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">10+</div>
+              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">AI & Agent Projects</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="btn-terracotta text-sm">
+              <span>Connect on LinkedIn</span>
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com/@techwithimran17" target="_blank" class="btn-outline-pill text-sm">
+              <span>YouTube Channel</span>
+              <i class="fa-brands fa-youtube text-red-500"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS BREAKDOWN (Matching Reference 2 Progress Bars & Cards) -->
+    <section id="skills" class="py-20 bg-stone-100/40 dark:bg-stone-900/30 border-y border-orange-500/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PROFICIENCY MATRIX</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+            Skills Mastered & In Action
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Skill Card 1: AI & Agent Frameworks -->
+          <div class="glass-panel rounded-3xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">AI Agents & LLMs</h3>
+            </div>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>LangGraph & LangChain</span>
+                  <span class="text-orange-600">92%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 92%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>Autonomous Agent Workflows</span>
+                  <span class="text-orange-600">90%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>RAG & Structured Outputs</span>
+                  <span class="text-orange-600">88%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Deep Learning & Vision -->
+          <div class="glass-panel rounded-3xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Machine Learning & Vision</h3>
+            </div>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>PyTorch & Neural Networks</span>
+                  <span class="text-orange-600">88%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>Computer Vision & OpenCV</span>
+                  <span class="text-orange-600">85%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>Scikit-learn & Statistical ML</span>
+                  <span class="text-orange-600">90%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Backend & Databases -->
+          <div class="glass-panel rounded-3xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-lg">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Backend & Web Stack</h3>
+            </div>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>SQL & Relational Schemas</span>
+                  <span class="text-orange-600">92%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 92%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>Python & Django</span>
+                  <span class="text-orange-600">88%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span>JavaScript, HTML5 & CSS3</span>
+                  <span class="text-orange-600">86%</span>
+                </div>
+                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 86%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION (Showcasing all 5 user uploaded photos) -->
+    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PHOTO GALLERY</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+            Moments & Perspectives
+          </h2>
+        </div>
+        <p class="text-sm text-stone-500 dark:text-stone-400 max-w-md">
+          A glimpse into my life as a student, researcher, and builder. Click any portrait to view in detail.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <!-- Image 1 -->
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-hero.png'">
+          <img src="assets/images/imran-hero.png" alt="Imran Beyan in city" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-semibold">City Architecture</span>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-about.png'">
+          <img src="assets/images/imran-about.png" alt="Imran Beyan casual pose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-semibold">Casual & Confident</span>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p1.png'">
+          <img src="assets/images/imran-p1.png" alt="Imran Beyan portrait 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-semibold">Athletic Training</span>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p2.jpg'">
+          <img src="assets/images/imran-p2.jpg" alt="Imran Beyan Manchester City Jersey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-semibold">Sports & Energy</span>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p3.png'">
+          <img src="assets/images/imran-p3.png" alt="Imran Beyan smile portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-semibold">Friendly Smile</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- YOUTUBE & SOCIAL HUB -->
+    <section class="py-16 bg-white/50 dark:bg-stone-900/40 border-t border-orange-500/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold">
+                <i class="fa-brands fa-youtube"></i>
+                <span>YouTube Creator: @techwithimran17</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+                Sharing Knowledge on AI, Coding & Problem Solving
+              </h3>
+              <p class="text-stone-600 dark:text-stone-400 text-sm sm:text-base leading-relaxed">
+                Follow along as I break down complex concepts: from zero to hero in building autonomous AI agents with LangGraph, to computer vision with PyTorch and competitive mathematical problem-solving.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+              <a href="https://youtube.com/@techwithimran17" target="_blank" class="btn-terracotta justify-center text-sm">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Subscribe on YouTube</span>
+              </a>
+              <a href="https://x.com/BeyanImran57496" target="_blank" class="btn-outline-pill justify-center text-sm">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>Follow on X / Twitter</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL / PHILOSOPHY QUOTE BANNER (Exact reproduction from Reference 1) -->
+    <section class="py-20 max-w-5xl mx-auto px-6 lg:px-12">
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-orange-500/20 shadow-xl relative">
+        <div class="text-5xl text-orange-500/30 font-serif leading-none mb-4">“</div>
+        <blockquote class="text-xl sm:text-2xl font-heading font-semibold text-stone-800 dark:text-stone-200 leading-snug mb-8">
+          Mathematics is the purest form of problem-solving. When you connect rigorous mathematical thinking with modern AI agents and deep neural networks, there are no limits to the challenges you can solve.
+        </blockquote>
+        <div class="flex items-center gap-4">
+          <img src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-12 h-12 rounded-full object-cover border-2 border-orange-500" />
+          <div>
+            <div class="font-bold text-sm text-stone-900 dark:text-stone-100">Imran Beyan</div>
+            <div class="text-xs text-stone-500 dark:text-stone-400">Special STEM School Student & AI Engineer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & FOOTER (Matching Reference 1 Bottom Layout) -->
+    <section id="contact" class="py-20 border-t border-orange-500/10 bg-stone-50 dark:bg-stone-950">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+          
+          <!-- Left Column: Friendly Callout -->
+          <div class="lg:col-span-6 space-y-6">
+            <h2 class="text-4xl sm:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100 tracking-tight leading-tight">
+              Let's create something <br />
+              <span class="text-orange-600 dark:text-orange-400">amazing together.</span>
+            </h2>
+            <p class="text-stone-600 dark:text-stone-400 text-base max-w-md">
+              Whether you want to discuss multi-agent AI research, collaborate on a project, or just talk mathematics and algorithms, my inbox is always open.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3 text-stone-700 dark:text-stone-300 text-sm">
+                <i class="fa-solid fa-envelope text-orange-500"></i>
+                <a href="mailto:imranbeyan@example.com" class="hover:underline font-mono">imranbeyan@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-3 text-stone-700 dark:text-stone-300 text-sm">
+                <i class="fa-solid fa-location-dot text-orange-500"></i>
+                <span>Special STEM School • Global Remote Collaboration</span>
+              </div>
+            </div>
+
+            <!-- Social Links Icons (Reference 1 style) -->
+            <div class="pt-4 flex items-center gap-4">
+              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
+                <i class="fa-brands fa-linkedin-in text-base"></i>
+              </a>
+              <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="GitHub" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
+                <i class="fa-brands fa-github text-base"></i>
+              </a>
+              <a href="https://x.com/BeyanImran57496" target="_blank" aria-label="X" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
+                <i class="fa-brands fa-x-twitter text-base"></i>
+              </a>
+              <a href="https://youtube.com/@techwithimran17" target="_blank" aria-label="YouTube" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-red-600 hover:border-red-500 transition-all shadow-sm">
+                <i class="fa-brands fa-youtube text-base"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Quick Contact Form -->
+          <div class="lg:col-span-6">
+            <div class="glass-panel rounded-3xl p-8 border border-white/80 dark:border-stone-800">
+              <form id="contact-form" class="space-y-4">
+                <div>
+                  <label for="sender-name" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Name</label>
+                  <input type="text" id="sender-name" required placeholder="Alex Morgan" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
+                </div>
+                <div>
+                  <label for="sender-email" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Email</label>
+                  <input type="email" id="sender-email" required placeholder="alex@example.com" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
+                </div>
+                <div>
+                  <label for="sender-message" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Message</label>
+                  <textarea id="sender-message" required rows="4" placeholder="Hello Imran, I'd love to connect regarding..." class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50"></textarea>
+                </div>
+                
+                <div id="contact-alert" class="hidden"></div>
+
+                <button type="submit" class="btn-terracotta w-full justify-center text-sm py-3">
+                  <span>Send Message</span>
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-footer copyright -->
+        <div class="pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-400">
+          <div>© 2026 Imran Beyan. Crafted with precision, mathematics & passion.</div>
+          <div class="flex items-center gap-6">
+            <a href="#hero" class="hover:underline">Back to Top ↑</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

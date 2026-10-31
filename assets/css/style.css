@@ -1,0 +1,319 @@
+/* Modern Minimalist Warm Aesthetic - Imran Beyan Portfolio */
+:root {
+  --bg-primary: #FAF5F0;
+  --bg-secondary: #FDF9F6;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --accent-peach: #FF8A65;
+  --accent-terracotta: #E26D5C;
+  --accent-coral: #E76F51;
+  --accent-deep: #B84A39;
+  --accent-glow: rgba(226, 109, 92, 0.25);
+  --text-main: #211B17;
+  --text-muted: #6B625B;
+  --text-light: #9B9189;
+  --border-subtle: rgba(226, 109, 92, 0.15);
+  --border-glass: rgba(255, 255, 255, 0.8);
+  --pill-bg: #EAE2DB;
+  --shadow-soft: 0 10px 30px -10px rgba(184, 74, 57, 0.08);
+  --shadow-float: 0 20px 40px -15px rgba(184, 74, 57, 0.16);
+  --radius-pill: 9999px;
+  --radius-card: 24px;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #12100E;
+  --bg-secondary: #1A1715;
+  --bg-card: rgba(30, 26, 23, 0.7);
+  --bg-card-hover: rgba(40, 35, 31, 0.9);
+  --accent-peach: #FF9E80;
+  --accent-terracotta: #F08A75;
+  --accent-coral: #FF7B54;
+  --accent-deep: #FFB4A2;
+  --accent-glow: rgba(240, 138, 117, 0.3);
+  --text-main: #F7F3EE;
+  --text-muted: #B8ADA4;
+  --text-light: #7E746C;
+  --border-subtle: rgba(240, 138, 117, 0.2);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --pill-bg: #27221E;
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-float: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+}
+
+/* Background Ambient Orbs */
+.ambient-glow-1 {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(255, 158, 128, 0.35) 0%, rgba(245, 230, 220, 0) 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ambient-glow-2 {
+  position: absolute;
+  top: 60%;
+  left: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(226, 109, 92, 0.18) 0%, rgba(245, 230, 220, 0) 70%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  box-shadow: var(--shadow-float);
+  border-color: var(--border-subtle);
+}
+
+/* Hero Portrait Halo */
+.hero-halo {
+  position: relative;
+}
+
+.hero-halo::before {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle at 60% 40%, rgba(255, 138, 101, 0.45) 0%, rgba(226, 109, 92, 0.2) 50%, transparent 75%);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(16px);
+  animation: pulse-halo 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-halo {
+  0% { transform: scale(0.98); opacity: 0.8; }
+  100% { transform: scale(1.04); opacity: 1; }
+}
+
+/* Status Pulsing Indicator */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10B981;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background-color: rgba(16, 185, 129, 0.4);
+  animation: ripple 2s infinite ease-out;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Custom Buttons */
+.btn-terracotta {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(226, 109, 92, 0.35);
+}
+
+.btn-terracotta:hover {
+  background-color: var(--accent-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(226, 109, 92, 0.45);
+  color: #FFFFFF;
+}
+
+.btn-outline-pill {
+  background-color: transparent;
+  color: var(--text-main);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-pill:hover {
+  background-color: rgba(226, 109, 92, 0.08);
+  border-color: var(--accent-terracotta);
+  transform: translateY(-2px);
+}
+
+/* Floating Status Card (Like Reference Image 1) */
+.floating-status-card {
+  position: absolute;
+  bottom: 30px;
+  right: -25px;
+  width: 250px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 18px 20px;
+  box-shadow: 0 15px 35px -10px rgba(184, 74, 57, 0.18);
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.floating-status-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card hover animation */
+.project-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card:hover .project-arrow-btn {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+  transform: rotate(45deg);
+}
+
+.project-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pill-bg);
+  color: var(--text-main);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tech Ribbon */
+.tech-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.25s ease;
+}
+
+.tech-item:hover {
+  color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  transform: translateY(-2px);
+}
+
+/* Interactive Agent Simulator Graph */
+.agent-node {
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.agent-node.active-node {
+  border-color: var(--accent-terracotta);
+  background: rgba(226, 109, 92, 0.12);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Skill Progress Meter (matching Reference 2) */
+.skill-bar-outer {
+  height: 8px;
+  background: var(--pill-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-peach), var(--accent-terracotta));
+  border-radius: 4px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-peach);
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .floating-status-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
