@@ -6,6 +6,9 @@
   <title>Imran Beyan | AI Systems Engineer, Special STEM Student & Problem Solver</title>
   <meta name="description" content="Personal portfolio of Imran Beyan - AI Engineer specializing in Python, PyTorch, LangChain, LangGraph, Computer Vision, SQL, Django, and Mathematical Problem Solving." />
   
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/imran-hero.png" type="image/png" />
+
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +54,7 @@
   <div class="ambient-glow-2"></div>
 
   <!-- Top Navigation (Inspired by Reference 1: alexmorgan.design) -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/70 dark:bg-stone-900/70 border-b border-orange-500/10 transition-colors duration-300">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/80 dark:bg-stone-900/80 border-b border-orange-500/10 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
@@ -62,14 +65,14 @@
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600 dark:text-stone-300">
-        <a href="#work" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Work</a>
+        <a href="#work" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Projects & Websites</a>
         <a href="#about" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About</a>
         <a href="#skills" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Skills</a>
         <a href="#agent-lab" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors flex items-center gap-1.5">
           <span>AI Lab</span>
           <span class="px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400">Live</span>
         </a>
-        <a href="#gallery" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Gallery</a>
+        <a href="#gallery" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Photos</a>
         <a href="#contact" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact</a>
       </nav>
 
@@ -98,16 +101,16 @@
   </header>
 
   <!-- Mobile Navigation Modal -->
-  <div id="mobile-menu" class="fixed inset-0 z-50 bg-stone-900/80 backdrop-blur-lg hidden flex flex-col justify-center items-center px-8 text-center">
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-stone-900/90 backdrop-blur-lg hidden flex flex-col justify-center items-center px-8 text-center">
     <button id="mobile-menu-close" aria-label="Close Navigation" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-stone-800 text-stone-200 flex items-center justify-center text-xl">
       <i class="fa-solid fa-xmark"></i>
     </button>
     <div class="flex flex-col gap-6 text-2xl font-heading font-semibold text-stone-100">
-      <a href="#work" class="mobile-nav-link hover:text-orange-400">Work</a>
+      <a href="#work" class="mobile-nav-link hover:text-orange-400">Projects & Websites</a>
       <a href="#about" class="mobile-nav-link hover:text-orange-400">About Me</a>
       <a href="#skills" class="mobile-nav-link hover:text-orange-400">Technical Skills</a>
       <a href="#agent-lab" class="mobile-nav-link hover:text-orange-400">Interactive AI Lab</a>
-      <a href="#gallery" class="mobile-nav-link hover:text-orange-400">Photo Gallery</a>
+      <a href="#gallery" class="mobile-nav-link hover:text-orange-400">Photos</a>
       <a href="#contact" class="mobile-nav-link hover:text-orange-400">Contact</a>
     </div>
     <div class="mt-8 flex gap-5 text-2xl text-stone-300">
@@ -151,7 +154,7 @@
           <!-- Action Buttons (Exact style from Reference 1) -->
           <div class="pt-2 flex flex-wrap items-center gap-4">
             <a href="#work" class="btn-terracotta">
-              <span>View my work</span>
+              <span>View my work & live sites</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#about" class="btn-outline-pill">
@@ -163,20 +166,20 @@
           <!-- Portrait Switcher Pills (Interactive feature) -->
           <div class="pt-6 border-t border-orange-500/15 flex items-center gap-3">
             <span class="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">Switch Avatar:</span>
-            <div class="flex items-center gap-2">
-              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border-2 border-orange-500 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-hero.png" title="Hero Portrait">
-                <img src="assets/images/imran-hero.png" alt="Hero Portrait" class="w-full h-full object-cover" />
+            <div class="flex items-center gap-2.5">
+              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border-2 border-orange-500 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-hero.png" title="City Portrait">
+                <img src="assets/images/imran-hero.png" alt="City Portrait" class="w-full h-full object-cover" />
               </button>
-              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-about.png" title="Casual Pose">
+              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-about.png" title="Casual Pose">
                 <img src="assets/images/imran-about.png" alt="Casual Pose" class="w-full h-full object-cover" />
               </button>
-              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p1.png" title="Purple Shirt">
-                <img src="assets/images/imran-p1.png" alt="Purple Shirt" class="w-full h-full object-cover" />
+              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-p1.png" title="Purple Collar">
+                <img src="assets/images/imran-p1.png" alt="Purple Collar" class="w-full h-full object-cover" />
               </button>
-              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p2.jpg" title="Jersey Portrait">
+              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-p2.jpg" title="Jersey Portrait">
                 <img src="assets/images/imran-p2.jpg" alt="Jersey Portrait" class="w-full h-full object-cover" />
               </button>
-              <button class="photo-thumb w-9 h-9 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm" data-src="assets/images/imran-p3.png" title="Collared Blue">
+              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-p3.png" title="Collared Blue">
                 <img src="assets/images/imran-p3.png" alt="Collared Blue" class="w-full h-full object-cover" />
               </button>
             </div>
@@ -193,24 +196,24 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-orange-400/40 via-rose-300/30 to-amber-200/40 rounded-full blur-2xl transform scale-105"></div>
 
             <!-- Circular Portrait Frame -->
-            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white/80 dark:border-stone-700/80 shadow-2xl z-0 bg-stone-100">
+            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white/90 dark:border-stone-700/90 shadow-2xl z-0 bg-stone-200">
               <img id="hero-portrait" src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" />
             </div>
 
-            <!-- Floating Frosted Glass Card (Exact reproduction from Reference 1) -->
-            <div class="floating-status-card">
+            <!-- Floating Frosted Glass Card (Touching it navigates directly to LinkedIn) -->
+            <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="floating-status-card block hover:shadow-2xl transition-all cursor-pointer group">
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="pulse-dot"></span>
-                <span class="text-xs font-semibold text-stone-700 dark:text-stone-300">Available for collaborations</span>
+                <span class="text-xs font-semibold text-stone-700 dark:text-stone-300 group-hover:text-orange-600 transition-colors">Available for collaborations</span>
               </div>
               <p class="text-xs text-stone-500 dark:text-stone-400 leading-snug mb-3">
                 Building multi-agent autonomous architectures & mathematical AI solvers.
               </p>
-              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-orange-400 hover:underline">
-                <span>View LinkedIn Profile</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
-            </div>
+              <div class="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:underline">
+                <span>Touch to Connect on LinkedIn</span>
+                <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </a>
 
           </div>
 
@@ -239,18 +242,18 @@
       </div>
     </section>
 
-    <!-- SELECTED WORK / PROJECTS (Matching Reference 1 Card Grid Layout) -->
+    <!-- SELECTED WORK & WEBSITES BUILT TOGETHER (Touching card opens website directly) -->
     <section id="work" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
       
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">SELECTED WORK</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">SELECTED WORK & LIVE WEBSITES</span>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-            Designing intelligent systems <br class="hidden sm:inline" />that solve hard problems.
+            Real Websites & Intelligent Systems. <br class="hidden sm:inline" />Touch any card to visit.
           </h2>
         </div>
-        <a href="https://github.com/imranbeyan162-collab" target="_blank" class="btn-outline-pill self-start md:self-auto text-sm">
+        <a href="https://github.com/imranbeyan162-collab" target="_blank" rel="noopener noreferrer" class="btn-outline-pill self-start md:self-auto text-sm">
           <span>View all on GitHub</span>
           <i class="fa-brands fa-github text-base"></i>
         </a>
@@ -259,16 +262,155 @@
       <!-- Projects 3-Card Responsive Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Project Card 1: LangGraph Multi-Agent Architecture -->
-        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+        <!-- Live Website 1: Zola Furniture -->
+        <a href="https://zola-furniture.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
           <div>
             <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-200 dark:from-stone-800 dark:to-amber-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-amber-700 dark:text-amber-400 shadow-sm flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Live Website
+                </span>
+                <i class="fa-solid fa-couch text-amber-600 text-lg"></i>
+              </div>
+              <!-- Simulated Furniture E-Commerce -->
+              <div class="space-y-2 z-10 font-mono text-[11px] text-stone-800 dark:text-stone-200">
+                <div class="p-2 rounded-xl bg-white/90 dark:bg-stone-900/90 shadow-sm flex items-center justify-between">
+                  <span class="font-bold">🛋️ Modern Living Collection</span>
+                  <span class="text-orange-600 font-bold">In Stock</span>
+                </div>
+                <div class="p-1.5 rounded-lg bg-white/70 dark:bg-stone-900/70 text-[10px] text-stone-600 dark:text-stone-300 flex justify-between">
+                  <span>zola-furniture.vercel.app</span>
+                  <span class="text-emerald-600 font-semibold">200 OK</span>
+                </div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-orange-500"></i>
+                <span>Touch to Open Live Website</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Zola Furniture</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Modern furniture catalog and e-commerce platform built with responsive design, fluid animations, item collections, and blazing-fast loading speeds on Vercel.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">JavaScript • HTML/CSS • Vercel</span>
+            <div class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- Live Website 2: Aalam Media -->
+        <a href="https://aalam-media.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
+          <div>
+            <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-200 dark:from-stone-800 dark:to-rose-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-rose-700 dark:text-rose-400 shadow-sm flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Live Website
+                </span>
+                <i class="fa-solid fa-photo-film text-rose-600 text-lg"></i>
+              </div>
+              <!-- Simulated Media Platform UI -->
+              <div class="space-y-2 z-10 font-mono text-[11px] text-stone-800 dark:text-stone-200">
+                <div class="p-2 rounded-xl bg-white/90 dark:bg-stone-900/90 shadow-sm flex items-center justify-between">
+                  <span class="font-bold">🎬 Aalam Media Hub</span>
+                  <span class="text-rose-600 font-bold">Broadcasting</span>
+                </div>
+                <div class="p-1.5 rounded-lg bg-white/70 dark:bg-stone-900/70 text-[10px] text-stone-600 dark:text-stone-300 flex justify-between">
+                  <span>aalam-media.vercel.app</span>
+                  <span class="text-emerald-600 font-semibold">200 OK</span>
+                </div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-rose-500"></i>
+                <span>Touch to Open Live Website</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Aalam Media</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Digital multimedia publishing platform for broadcast media, editorial content delivery, storytelling, and rich interactive audience engagement.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">JavaScript • Responsive UI • Vercel</span>
+            <div class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3: Tracker Dashboard -->
+        <a href="https://github.com/imranbeyan162-collab/tracker" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
+          <div>
+            <!-- Visual Mockup Canvas -->
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-indigo-100 to-purple-200 dark:from-stone-800 dark:to-indigo-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+              <div class="flex justify-between items-center z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-indigo-700 dark:text-indigo-400 shadow-sm flex items-center gap-1.5">
+                  <i class="fa-brands fa-github"></i>
+                  GitHub Project
+                </span>
+                <i class="fa-solid fa-chart-line text-indigo-600 text-lg"></i>
+              </div>
+              <!-- Simulated Tracker Dashboard -->
+              <div class="space-y-1.5 z-10 font-mono text-[10px] text-stone-700 dark:text-stone-300">
+                <div class="p-1.5 rounded-lg bg-white/90 dark:bg-stone-900/90 flex justify-between">
+                  <span>Tracking Metric: Tasks</span>
+                  <span class="text-indigo-600 font-bold">100% Completed</span>
+                </div>
+                <div class="p-1.5 rounded-lg bg-white/90 dark:bg-stone-900/90 flex justify-between">
+                  <span>Analytics Telemetry</span>
+                  <span class="text-emerald-600 font-bold">Synced</span>
+                </div>
+              </div>
+              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i>
+                <span>Touch to Open GitHub Repo</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Task & Activity Tracker</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+              Productivity tracking system engineered with clean HTML, CSS, and JavaScript. Designed for monitoring development goals, metrics, and routine milestones.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">HTML5 • JavaScript • Data UI</span>
+            <div class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 4: Autonomous Multi-Agent Orchestrator -->
+        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
+          <div>
             <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-orange-100 to-rose-100 dark:from-stone-800 dark:to-orange-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
               <div class="flex justify-between items-center z-10">
                 <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-orange-600 dark:text-orange-400 shadow-sm">AI Agents</span>
                 <i class="fa-solid fa-diagram-project text-stone-400"></i>
               </div>
-              <!-- Simulated Graph Nodes -->
               <div class="flex items-center justify-around py-4 z-10">
                 <div class="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-md flex items-center justify-center font-mono text-xs text-orange-600 font-bold border border-orange-200">Plan</div>
                 <div class="h-0.5 w-8 bg-orange-400"></div>
@@ -282,9 +424,9 @@
               </div>
             </div>
 
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
-              Multi-Agent Autonomous Orchestrator
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Multi-Agent Autonomous Orchestrator</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
             </h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
               Cyclic multi-agent architecture built with LangGraph & LangChain. Employs autonomous task decomposition, persistent memory checkpoints, dynamic tool routing, and automated self-reflection.
@@ -293,37 +435,35 @@
 
           <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
             <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Python • LangGraph • LangChain</span>
-            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+            <div class="project-arrow-btn">
               <i class="fa-solid fa-arrow-right text-sm"></i>
-            </a>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <!-- Project Card 2: PyTorch Real-Time Computer Vision Pipeline -->
-        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+        <!-- Project 5: Neural Computer Vision & Perception -->
+        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
           <div>
-            <!-- Visual Mockup Canvas -->
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-stone-800 dark:to-amber-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-200 dark:from-stone-800 dark:to-emerald-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
               <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-amber-600 dark:text-amber-400 shadow-sm">Computer Vision</span>
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-emerald-700 dark:text-emerald-400 shadow-sm">Computer Vision</span>
                 <i class="fa-solid fa-camera text-stone-400"></i>
               </div>
-              <!-- Simulated Bounding Boxes -->
               <div class="relative h-24 w-full flex items-center justify-center">
-                <div class="w-32 h-20 border-2 border-dashed border-amber-500 rounded-lg bg-amber-500/10 flex items-start justify-between p-1.5">
-                  <span class="text-[9px] font-mono bg-amber-500 text-white px-1 rounded">Target: 99.4%</span>
-                  <span class="text-[9px] font-mono text-amber-600">60 FPS</span>
+                <div class="w-32 h-20 border-2 border-dashed border-emerald-500 rounded-lg bg-emerald-500/10 flex items-start justify-between p-1.5">
+                  <span class="text-[9px] font-mono bg-emerald-500 text-white px-1 rounded">Target: 99.4%</span>
+                  <span class="text-[9px] font-mono text-emerald-700 dark:text-emerald-300">60 FPS</span>
                 </div>
               </div>
               <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 <span>PyTorch Custom CNN & Inference</span>
               </div>
             </div>
 
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
-              Neural Computer Vision & Perception
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Neural Computer Vision & Perception</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
             </h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
               Deep convolutional neural network trained on PyTorch for high-speed spatial object detection, edge feature extraction, and real-time bounding box tracking with OpenCV.
@@ -332,41 +472,39 @@
 
           <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
             <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">PyTorch • OpenCV • Scikit-learn</span>
-            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+            <div class="project-arrow-btn">
               <i class="fa-solid fa-arrow-right text-sm"></i>
-            </a>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <!-- Project Card 3: Intelligent Full-Stack Django & SQL Engine -->
-        <div class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group">
+        <!-- Project 6: Scalable Full-Stack Django Platform -->
+        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
           <div>
-            <!-- Visual Mockup Canvas -->
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-100 dark:from-stone-800 dark:to-rose-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
+            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-200 dark:from-stone-800 dark:to-blue-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
               <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-rose-600 dark:text-rose-400 shadow-sm">Full-Stack & SQL</span>
+                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-blue-700 dark:text-blue-400 shadow-sm">Full-Stack & SQL</span>
                 <i class="fa-solid fa-server text-stone-400"></i>
               </div>
-              <!-- Simulated Database schema -->
               <div class="space-y-1.5 z-10 font-mono text-[10px] text-stone-700 dark:text-stone-300">
                 <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
-                  <span>SELECT * FROM agents</span>
+                  <span>SELECT * FROM users</span>
                   <span class="text-emerald-500 font-bold">200 OK</span>
                 </div>
                 <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
-                  <span>JOIN telemetry ON id</span>
-                  <span class="text-orange-500">2.1ms</span>
+                  <span>JOIN analytics ON id</span>
+                  <span class="text-blue-600">1.8ms</span>
                 </div>
               </div>
               <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                 <span>Django REST + Relational SQL</span>
               </div>
             </div>
 
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
-              Scalable Intelligence Web Platform
+            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
+              <span>Scalable Intelligence Web Platform</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
             </h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
               Enterprise-grade Django architecture powered by optimized SQL schemas, indexed joins, and REST APIs communicating seamlessly with reactive JavaScript frontends.
@@ -375,11 +513,11 @@
 
           <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
             <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Django • SQL • JS • HTML/CSS</span>
-            <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="Open Project" class="project-arrow-btn">
+            <div class="project-arrow-btn">
               <i class="fa-solid fa-arrow-right text-sm"></i>
-            </a>
+            </div>
           </div>
-        </div>
+        </a>
 
       </div>
 
@@ -451,7 +589,7 @@
             </div>
 
             <div class="mt-6 flex justify-end">
-              <button id="run-agent-btn" class="btn-terracotta text-sm py-2 px-5">
+              <button id="run-agent-btn" class="btn-terracotta text-sm py-2 px-5 cursor-pointer">
                 <span>▶ Run Agent Graph</span>
               </button>
             </div>
@@ -484,7 +622,7 @@
             </div>
 
             <div class="mt-6 flex justify-end">
-              <button id="math-solve-btn" class="btn-outline-pill text-sm py-2 px-5">
+              <button id="math-solve-btn" class="btn-outline-pill text-sm py-2 px-5 cursor-pointer">
                 <span>Solve Equation</span>
                 <i class="fa-solid fa-calculator text-xs"></i>
               </button>
@@ -533,7 +671,7 @@
           </p>
 
           <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
-            Over the past years, I have engineered neural models with PyTorch, built computer vision pipelines that process real-time streams, orchestrated multi-agent reasoning chains using LangChain & LangGraph, and engineered resilient database-backed web architectures using Django and SQL.
+            Over the past years, I have engineered neural models with PyTorch, built computer vision pipelines that process real-time streams, orchestrated multi-agent reasoning chains using LangChain & LangGraph, and engineered resilient database-backed web architectures using Django, JavaScript, and SQL.
           </p>
 
           <!-- Stat Counters (Reference 2 style) -->
@@ -548,16 +686,16 @@
             </div>
             <div>
               <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">10+</div>
-              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">AI & Agent Projects</div>
+              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">AI & Web Projects</div>
             </div>
           </div>
 
           <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="btn-terracotta text-sm">
+            <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn-terracotta text-sm">
               <span>Connect on LinkedIn</span>
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://youtube.com/@techwithimran17" target="_blank" class="btn-outline-pill text-sm">
+            <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="btn-outline-pill text-sm">
               <span>YouTube Channel</span>
               <i class="fa-brands fa-youtube text-red-500"></i>
             </a>
@@ -685,7 +823,7 @@
       </div>
     </section>
 
-    <!-- PHOTO GALLERY SECTION (Showcasing all 5 user uploaded photos) -->
+    <!-- PHOTO GALLERY SECTION (Showcasing all 5 user uploaded photos with touch feedback) -->
     <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
@@ -695,86 +833,111 @@
           </h2>
         </div>
         <p class="text-sm text-stone-500 dark:text-stone-400 max-w-md">
-          A glimpse into my life as a student, researcher, and builder. Click any portrait to view in detail.
+          A glimpse into my life as a student, researcher, and builder. Touch any photo to set it as your main avatar!
         </p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         
         <!-- Image 1 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-hero.png'">
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-hero.png', this)">
           <img src="assets/images/imran-hero.png" alt="Imran Beyan in city" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-semibold">City Architecture</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-bold">City Architecture</span>
+            <span class="text-[10px] text-orange-300">Touch to Select</span>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-about.png'">
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-about.png', this)">
           <img src="assets/images/imran-about.png" alt="Imran Beyan casual pose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-semibold">Casual & Confident</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-bold">Casual & Confident</span>
+            <span class="text-[10px] text-orange-300">Touch to Select</span>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p1.png'">
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p1.png', this)">
           <img src="assets/images/imran-p1.png" alt="Imran Beyan portrait 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-semibold">Athletic Training</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-bold">Athletic Training</span>
+            <span class="text-[10px] text-orange-300">Touch to Select</span>
           </div>
         </div>
 
         <!-- Image 4 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p2.jpg'">
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p2.jpg', this)">
           <img src="assets/images/imran-p2.jpg" alt="Imran Beyan Manchester City Jersey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-semibold">Sports & Energy</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-bold">Sports & Energy</span>
+            <span class="text-[10px] text-orange-300">Touch to Select</span>
           </div>
         </div>
 
         <!-- Image 5 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative" onclick="document.getElementById('hero-portrait').src='assets/images/imran-p3.png'">
+        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p3.png', this)">
           <img src="assets/images/imran-p3.png" alt="Imran Beyan smile portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-semibold">Friendly Smile</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs font-bold">Friendly Smile</span>
+            <span class="text-[10px] text-orange-300">Touch to Select</span>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- YOUTUBE & SOCIAL HUB -->
+    <!-- YOUTUBE & SOCIAL HUB (Touching card takes them directly to YouTube / X) -->
     <section class="py-16 bg-white/50 dark:bg-stone-900/40 border-t border-orange-500/10">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div class="lg:col-span-8 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- YouTube Big Touchable Banner -->
+          <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-red-500 hover:shadow-2xl transition-all">
+            <div class="flex items-center justify-between mb-4">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold">
-                <i class="fa-brands fa-youtube"></i>
-                <span>YouTube Creator: @techwithimran17</span>
+                <i class="fa-brands fa-youtube text-base"></i>
+                <span>YouTube Creator Channel</span>
               </div>
-              <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-                Sharing Knowledge on AI, Coding & Problem Solving
-              </h3>
-              <p class="text-stone-600 dark:text-stone-400 text-sm sm:text-base leading-relaxed">
-                Follow along as I break down complex concepts: from zero to hero in building autonomous AI agents with LangGraph, to computer vision with PyTorch and competitive mathematical problem-solving.
-              </p>
+              <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs"></i>
+              </div>
             </div>
-
-            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-              <a href="https://youtube.com/@techwithimran17" target="_blank" class="btn-terracotta justify-center text-sm">
-                <i class="fa-brands fa-youtube"></i>
-                <span>Subscribe on YouTube</span>
-              </a>
-              <a href="https://x.com/BeyanImran57496" target="_blank" class="btn-outline-pill justify-center text-sm">
-                <i class="fa-brands fa-x-twitter"></i>
-                <span>Follow on X / Twitter</span>
-              </a>
+            <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-red-600 transition-colors">
+              @techwithimran17
+            </h3>
+            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+              Watch step-by-step tutorials on LangGraph, PyTorch computer vision, and mathematical problem-solving. Touch anywhere on this card to open YouTube.
+            </p>
+            <div class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 group-hover:underline">
+              <span>Touch to Visit YouTube Channel</span>
+              <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
             </div>
+          </a>
 
-          </div>
+          <!-- X / Twitter Big Touchable Banner -->
+          <a href="https://x.com/BeyanImran57496" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-stone-800 dark:hover:border-stone-400 hover:shadow-2xl transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-bold">
+                <i class="fa-brands fa-x-twitter text-base"></i>
+                <span>X / Twitter Feed</span>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-x-twitter text-sm"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
+              @BeyanImran57496
+            </h3>
+            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+              Real-time thoughts on autonomous AI agents, mathematical conjectures, and daily engineering breakthroughs. Touch anywhere on this card to open X.
+            </p>
+            <div class="inline-flex items-center gap-2 text-sm font-bold text-stone-800 dark:text-stone-200 group-hover:underline">
+              <span>Touch to Follow on X / Twitter</span>
+              <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
@@ -815,7 +978,7 @@
             <div class="space-y-3 pt-2">
               <div class="flex items-center gap-3 text-stone-700 dark:text-stone-300 text-sm">
                 <i class="fa-solid fa-envelope text-orange-500"></i>
-                <a href="mailto:imranbeyan@example.com" class="hover:underline font-mono">imranbeyan@gmail.com</a>
+                <a href="mailto:imranbeyan@gmail.com" class="hover:underline font-mono">imranbeyan@gmail.com</a>
               </div>
               <div class="flex items-center gap-3 text-stone-700 dark:text-stone-300 text-sm">
                 <i class="fa-solid fa-location-dot text-orange-500"></i>
@@ -823,19 +986,19 @@
               </div>
             </div>
 
-            <!-- Social Links Icons (Reference 1 style) -->
+            <!-- Social Links Icons (Touching each takes them directly there) -->
             <div class="pt-4 flex items-center gap-4">
-              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
-                <i class="fa-brands fa-linkedin-in text-base"></i>
+              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-12 h-12 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm cursor-pointer">
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
               </a>
-              <a href="https://github.com/imranbeyan162-collab" target="_blank" aria-label="GitHub" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
-                <i class="fa-brands fa-github text-base"></i>
+              <a href="https://github.com/imranbeyan162-collab" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-12 h-12 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm cursor-pointer">
+                <i class="fa-brands fa-github text-lg"></i>
               </a>
-              <a href="https://x.com/BeyanImran57496" target="_blank" aria-label="X" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm">
-                <i class="fa-brands fa-x-twitter text-base"></i>
+              <a href="https://x.com/BeyanImran57496" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-12 h-12 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm cursor-pointer">
+                <i class="fa-brands fa-x-twitter text-lg"></i>
               </a>
-              <a href="https://youtube.com/@techwithimran17" target="_blank" aria-label="YouTube" class="w-11 h-11 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-red-600 hover:border-red-500 transition-all shadow-sm">
-                <i class="fa-brands fa-youtube text-base"></i>
+              <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-12 h-12 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-red-600 hover:border-red-500 transition-all shadow-sm cursor-pointer">
+                <i class="fa-brands fa-youtube text-lg"></i>
               </a>
             </div>
 
@@ -860,7 +1023,7 @@
                 
                 <div id="contact-alert" class="hidden"></div>
 
-                <button type="submit" class="btn-terracotta w-full justify-center text-sm py-3">
+                <button type="submit" class="btn-terracotta w-full justify-center text-sm py-3 cursor-pointer">
                   <span>Send Message</span>
                   <i class="fa-regular fa-paper-plane"></i>
                 </button>
@@ -884,5 +1047,20 @@
 
   <!-- Interactive Scripts -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function setAvatar(src, el) {
+      const heroImg = document.getElementById('hero-portrait');
+      if (heroImg) {
+        heroImg.style.opacity = '0.3';
+        setTimeout(() => {
+          heroImg.src = src;
+          heroImg.style.opacity = '1';
+        }, 150);
+      }
+      document.querySelectorAll('.photo-thumb').forEach(t => t.classList.remove('ring-2', 'ring-orange-500'));
+      const match = document.querySelector(`.photo-thumb[data-src="${src}"]`);
+      if (match) match.classList.add('ring-2', 'ring-orange-500');
+    }
+  </script>
 </body>
 </html>
