@@ -3,8 +3,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMobileMenu();
-  initAgentSimulator();
-  initMathDemo();
   initPhotoSwitcher();
   initContactForm();
   initScrollAnimations();
@@ -82,130 +80,15 @@ function initPhotoSwitcher() {
         heroImg.src = newSrc;
         heroImg.style.opacity = '1';
         heroImg.style.transform = 'scale(1)';
-      }, 200);
+      }, 150);
 
-      thumbnails.forEach(t => t.classList.remove('ring-2', 'ring-orange-500', 'border-transparent'));
+      thumbnails.forEach(t => t.classList.remove('ring-2', 'ring-orange-500'));
       thumb.classList.add('ring-2', 'ring-orange-500');
     });
   });
 }
 
-// 4. Interactive LangGraph & AI Agent Simulator
-function initAgentSimulator() {
-  const runBtn = document.getElementById('run-agent-btn');
-  const workflowSelect = document.getElementById('agent-workflow-select');
-  const logsContainer = document.getElementById('agent-logs');
-  const stepNodes = document.querySelectorAll('.agent-step-node');
-
-  if (!runBtn || !logsContainer) return;
-
-  const workflows = {
-    math: [
-      { step: 0, text: '📥 [Input]: "Find the eigenvalues & solve system dx/dt = A x for stability..."' },
-      { step: 1, text: '🧠 [Planner]: Decomposing into characteristic polynomial det(A - λI) = 0.' },
-      { step: 2, text: '⚙️ [Tool: Python/SymPy]: Computing roots λ₁ = -2.5, λ₂ = -0.8 + 1.2i.' },
-      { step: 3, text: '🔍 [Critic/Evaluator]: Real parts are negative (Re(λ) < 0) -> Stable focus.' },
-      { step: 4, text: '✅ [LangGraph State]: Final solution validated & phase-portrait generated.' }
-    ],
-    vision: [
-      { step: 0, text: '📥 [Input]: Live video feed ingested from camera sensor.' },
-      { step: 1, text: '🧠 [Planner]: Routing frames to PyTorch edge detector & YOLO model.' },
-      { step: 2, text: '⚙️ [Tool: PyTorch/CV]: Inferred bounding boxes [person: 98%, book: 94%].' },
-      { step: 3, text: '🔍 [Critic/Evaluator]: Temporal tracking match verified across 30 fps.' },
-      { step: 4, text: '✅ [LangGraph State]: Low latency stream verified at 18ms inference.' }
-    ],
-    agentic: [
-      { step: 0, text: '📥 [Input]: "Analyze student SQL database for top percentile performers."' },
-      { step: 1, text: '🧠 [Planner]: Formulating LangGraph multi-table aggregation query plan.' },
-      { step: 2, text: '⚙️ [Tool: SQL Engine]: Executing optimized indexed CTEs and window functions.' },
-      { step: 3, text: '🔍 [Critic/Evaluator]: Validating against edge cases and null constraints.' },
-      { step: 4, text: '✅ [LangGraph State]: Structured JSON response dispatched to Django REST API.' }
-    ]
-  };
-
-  runBtn.addEventListener('click', async () => {
-    const selected = workflowSelect.value;
-    const steps = workflows[selected] || workflows.math;
-    
-    runBtn.disabled = true;
-    runBtn.innerHTML = `<span>Executing Agent Graph...</span>`;
-    logsContainer.innerHTML = '';
-
-    // Reset step highlighting
-    stepNodes.forEach(node => node.classList.remove('active-node'));
-
-    for (let i = 0; i < steps.length; i++) {
-      const item = steps[i];
-      
-      // Highlight active node in diagram
-      stepNodes.forEach((node, idx) => {
-        if (idx === item.step) {
-          node.classList.add('active-node');
-        } else {
-          node.classList.remove('active-node');
-        }
-      });
-
-      // Append log entry
-      const logLine = document.createElement('div');
-      logLine.className = 'font-mono text-xs md:text-sm py-1.5 px-3 rounded bg-black/10 dark:bg-white/5 border-l-2 border-orange-500 animate-fadeIn';
-      logLine.innerText = item.text;
-      logsContainer.appendChild(logLine);
-      logsContainer.scrollTop = logsContainer.scrollHeight;
-
-      await new Promise(r => setTimeout(r, 750));
-    }
-
-    runBtn.disabled = false;
-    runBtn.innerHTML = `<span>▶ Run Workflow Again</span>`;
-  });
-}
-
-// 5. Interactive Math & Problem Solver Widget
-function initMathDemo() {
-  const solveBtn = document.getElementById('math-solve-btn');
-  const problemType = document.getElementById('problem-type');
-  const resultBox = document.getElementById('math-result');
-
-  if (!solveBtn || !resultBox) return;
-
-  const solutions = {
-    quad: {
-      title: 'Quadratic Equation Solver (ax² + bx + c = 0)',
-      formula: 'x = (-b ± √(b² - 4ac)) / (2a)',
-      calc: 'For 2x² - 8x + 6 = 0: Discriminant Δ = (-8)² - 4(2)(6) = 64 - 48 = 16. Roots: x₁ = 3, x₂ = 1.',
-      insight: 'Real and distinct solutions. Parabola vertex at x = 2, minimum value y = -2.'
-    },
-    fib: {
-      title: 'Fast Matrix Exponentiation Fibonacci O(log n)',
-      formula: '[[1, 1], [1, 0]]ⁿ = [[F(n+1), F(n)], [F(n), F(n-1)]]',
-      calc: 'Computing F(50): 12,586,269,025 calculated in 6 matrix multiplications.',
-      insight: 'Exponential speedup over naive recursion O(2ⁿ), demonstrating algorithmic efficiency.'
-    },
-    vision_filter: {
-      title: 'Computer Vision Sobel 3x3 Edge Kernel',
-      formula: 'G_x = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]] * Image',
-      calc: 'Gradient magnitude |G| = √(G_x² + G_y²). Gradient direction θ = atan2(G_y, G_x).',
-      insight: 'Extracts spatial intensity gradients fundamental to edge and corner detection in PyTorch.'
-    }
-  };
-
-  solveBtn.addEventListener('click', () => {
-    const val = problemType.value;
-    const sol = solutions[val];
-    
-    resultBox.innerHTML = `
-      <div class="space-y-2">
-        <div class="font-semibold text-orange-600 dark:text-orange-400 text-sm">${sol.title}</div>
-        <div class="font-mono text-xs p-2 rounded bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200">${sol.formula}</div>
-        <div class="text-sm text-stone-700 dark:text-stone-300 font-medium">${sol.calc}</div>
-        <div class="text-xs text-stone-500 dark:text-stone-400 italic">💡 Mathematical Insight: ${sol.insight}</div>
-      </div>
-    `;
-  });
-}
-
-// 6. Contact Form Simulation
+// 4. Contact Form
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const alert = document.getElementById('contact-alert');
@@ -215,9 +98,6 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('sender-name').value;
-    const email = document.getElementById('sender-email').value;
-    const message = document.getElementById('sender-message').value;
-
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
@@ -227,7 +107,7 @@ function initContactForm() {
       alert.classList.remove('hidden');
       alert.innerHTML = `
         <div class="p-4 rounded-xl bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 text-sm">
-          <strong>Thank you, ${name}!</strong> Your message has been prepared. You can also reach Imran directly via LinkedIn or email!
+          <strong>Thank you, ${name}!</strong> Your message has been received. You can also connect directly on LinkedIn or YouTube.
         </div>
       `;
       submitBtn.disabled = false;
@@ -236,12 +116,12 @@ function initContactForm() {
 
       setTimeout(() => {
         alert.classList.add('hidden');
-      }, 6000);
-    }, 900);
+      }, 5000);
+    }, 700);
   });
 }
 
-// 7. Scroll Animations & Reveal
+// 5. Scroll Animations
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

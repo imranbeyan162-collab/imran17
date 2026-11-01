@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imran Beyan | AI Systems Engineer, Special STEM Student & Problem Solver</title>
-  <meta name="description" content="Personal portfolio of Imran Beyan - AI Engineer specializing in Python, PyTorch, LangChain, LangGraph, Computer Vision, SQL, Django, and Mathematical Problem Solving." />
+  <title>Imran Beyan | AI Systems Engineer & Problem Solver</title>
+  <meta name="description" content="Personal portfolio of Imran Beyan - Special school student skilled in Python, PyTorch, LangChain, LangGraph, Computer Vision, SQL, Django, and Mathematical Problem Solving." />
   
   <!-- Favicon -->
   <link rel="icon" href="assets/images/imran-hero.png" type="image/png" />
@@ -53,8 +53,8 @@
   <div class="ambient-glow-1"></div>
   <div class="ambient-glow-2"></div>
 
-  <!-- Top Navigation (Inspired by Reference 1: alexmorgan.design) -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/80 dark:bg-stone-900/80 border-b border-orange-500/10 transition-colors duration-300">
+  <!-- Top Navigation (Editorial Minimalist) -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/85 dark:bg-stone-900/85 border-b border-orange-500/10 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
@@ -65,13 +65,9 @@
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600 dark:text-stone-300">
-        <a href="#work" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Projects & Websites</a>
+        <a href="#work" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Websites & Work</a>
         <a href="#about" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About</a>
         <a href="#skills" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Skills</a>
-        <a href="#agent-lab" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors flex items-center gap-1.5">
-          <span>AI Lab</span>
-          <span class="px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400">Live</span>
-        </a>
         <a href="#gallery" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Photos</a>
         <a href="#contact" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contact</a>
       </nav>
@@ -79,13 +75,13 @@
       <!-- Right Controls: Theme Toggle & Let's Talk CTA -->
       <div class="flex items-center gap-3">
         <!-- Theme Toggle -->
-        <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-200 dark:border-stone-700 bg-white/60 dark:bg-stone-800/60 hover:bg-white dark:hover:bg-stone-700 transition-all shadow-sm">
+        <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-200 dark:border-stone-700 bg-white/70 dark:bg-stone-800/70 hover:bg-white dark:hover:bg-stone-700 transition-all shadow-sm cursor-pointer">
           <span id="theme-icon">
             <i class="fa-solid fa-moon text-stone-700 dark:text-amber-300"></i>
           </span>
         </button>
 
-        <!-- Pill CTA Button (Exact match from reference) -->
+        <!-- Pill CTA Button -->
         <a href="#contact" class="btn-terracotta hidden sm:inline-flex text-sm py-2.5 px-6">
           <span>Let's talk</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
@@ -100,39 +96,38 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Modal -->
+  <!-- Mobile Navigation Drawer -->
   <div id="mobile-menu" class="fixed inset-0 z-50 bg-stone-900/90 backdrop-blur-lg hidden flex flex-col justify-center items-center px-8 text-center">
-    <button id="mobile-menu-close" aria-label="Close Navigation" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-stone-800 text-stone-200 flex items-center justify-center text-xl">
+    <button id="mobile-menu-close" aria-label="Close Navigation" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-stone-800 text-stone-200 flex items-center justify-center text-xl cursor-pointer">
       <i class="fa-solid fa-xmark"></i>
     </button>
     <div class="flex flex-col gap-6 text-2xl font-heading font-semibold text-stone-100">
-      <a href="#work" class="mobile-nav-link hover:text-orange-400">Projects & Websites</a>
+      <a href="#work" class="mobile-nav-link hover:text-orange-400">Websites & Work</a>
       <a href="#about" class="mobile-nav-link hover:text-orange-400">About Me</a>
-      <a href="#skills" class="mobile-nav-link hover:text-orange-400">Technical Skills</a>
-      <a href="#agent-lab" class="mobile-nav-link hover:text-orange-400">Interactive AI Lab</a>
+      <a href="#skills" class="mobile-nav-link hover:text-orange-400">Skills</a>
       <a href="#gallery" class="mobile-nav-link hover:text-orange-400">Photos</a>
       <a href="#contact" class="mobile-nav-link hover:text-orange-400">Contact</a>
     </div>
     <div class="mt-8 flex gap-5 text-2xl text-stone-300">
-      <a href="https://github.com/imranbeyan162-collab" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://x.com/BeyanImran57496" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://youtube.com/@techwithimran17" target="_blank" class="hover:text-orange-400"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://github.com/imranbeyan162-collab" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/BeyanImran57496" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </div>
 
   <main>
-    <!-- HERO SECTION (Recreating Reference 1 Layout with Imran's Photo & Profile) -->
-    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <!-- HERO SECTION (Reference 1 Layout with Imran's Photo & Direct Links) -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
         <!-- Left Hero Content -->
         <div class="lg:col-span-7 space-y-6 z-10">
           
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/80 dark:bg-orange-950/50 border border-orange-300/40 text-orange-700 dark:text-orange-300 text-xs font-semibold tracking-wide uppercase">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/90 dark:bg-orange-950/60 border border-orange-300/40 text-orange-700 dark:text-orange-300 text-xs font-semibold tracking-wide uppercase">
             <span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
-            Special School STEM Student & AI Researcher
+            Special School Student • AI & Problem Solving
           </div>
 
           <!-- Main Headline -->
@@ -143,18 +138,18 @@
 
           <!-- Role Subtitle -->
           <div class="text-xl md:text-2xl font-semibold text-stone-700 dark:text-stone-300">
-            Autonomous AI Systems & Computer Vision Engineer
+            AI Builder & Mathematics Enthusiast
           </div>
 
-          <!-- Bio Paragraph -->
+          <!-- Bio Paragraph (Truthful to user's exact words) -->
           <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-xl leading-relaxed">
-            Special school student deeply passionate about mathematics and complex problem-solving. Building intelligent agents with <span class="font-semibold text-stone-900 dark:text-stone-100">LangChain</span> & <span class="font-semibold text-stone-900 dark:text-stone-100">LangGraph</span>, deep neural networks with <span class="font-semibold text-stone-900 dark:text-stone-100">PyTorch</span>, and production platforms with <span class="font-semibold text-stone-900 dark:text-stone-100">Django & SQL</span>.
+            Special school student with a deep passion for mathematics and solving complex problems. Building autonomous AI agents with <span class="font-semibold text-stone-900 dark:text-stone-100">LangChain</span> & <span class="font-semibold text-stone-900 dark:text-stone-100">LangGraph</span>, deep learning models with <span class="font-semibold text-stone-900 dark:text-stone-100">PyTorch & Computer Vision</span>, and web applications with <span class="font-semibold text-stone-900 dark:text-stone-100">Django, SQL, JavaScript, HTML & CSS</span>.
           </p>
 
-          <!-- Action Buttons (Exact style from Reference 1) -->
+          <!-- Action Buttons -->
           <div class="pt-2 flex flex-wrap items-center gap-4">
             <a href="#work" class="btn-terracotta">
-              <span>View my work & live sites</span>
+              <span>Explore My Websites</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#about" class="btn-outline-pill">
@@ -163,15 +158,12 @@
             </a>
           </div>
 
-          <!-- Portrait Switcher Pills (Interactive feature) -->
+          <!-- Portrait Switcher Pills -->
           <div class="pt-6 border-t border-orange-500/15 flex items-center gap-3">
             <span class="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">Switch Avatar:</span>
             <div class="flex items-center gap-2.5">
               <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border-2 border-orange-500 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-hero.png" title="City Portrait">
                 <img src="assets/images/imran-hero.png" alt="City Portrait" class="w-full h-full object-cover" />
-              </button>
-              <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-about.png" title="Casual Pose">
-                <img src="assets/images/imran-about.png" alt="Casual Pose" class="w-full h-full object-cover" />
               </button>
               <button class="photo-thumb w-10 h-10 rounded-full overflow-hidden border border-stone-300 dark:border-stone-700 transition-all hover:scale-110 shadow-sm cursor-pointer" data-src="assets/images/imran-p1.png" title="Purple Collar">
                 <img src="assets/images/imran-p1.png" alt="Purple Collar" class="w-full h-full object-cover" />
@@ -187,16 +179,16 @@
 
         </div>
 
-        <!-- Right Hero Visual: Circular Portrait & Floating Glass Badge (Recreating Reference 1) -->
+        <!-- Right Hero Visual: Circular Portrait & Floating Glass Badge -->
         <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           
           <div class="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px]">
             
-            <!-- Radial Glow Backing (Matches Reference 1's soft peach halo) -->
+            <!-- Radial Glow Backing -->
             <div class="absolute inset-0 bg-gradient-to-tr from-orange-400/40 via-rose-300/30 to-amber-200/40 rounded-full blur-2xl transform scale-105"></div>
 
             <!-- Circular Portrait Frame -->
-            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white/90 dark:border-stone-700/90 shadow-2xl z-0 bg-stone-200">
+            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white/90 dark:border-stone-700/90 shadow-2xl z-0 bg-stone-100">
               <img id="hero-portrait" src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" />
             </div>
 
@@ -207,10 +199,10 @@
                 <span class="text-xs font-semibold text-stone-700 dark:text-stone-300 group-hover:text-orange-600 transition-colors">Available for collaborations</span>
               </div>
               <p class="text-xs text-stone-500 dark:text-stone-400 leading-snug mb-3">
-                Building multi-agent autonomous architectures & mathematical AI solvers.
+                Special school student passionate about mathematics & AI agent architectures.
               </p>
               <div class="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:underline">
-                <span>Touch to Connect on LinkedIn</span>
+                <span>Touch to Open LinkedIn</span>
                 <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
               </div>
             </a>
@@ -222,744 +214,419 @@
       </div>
     </section>
 
-    <!-- TRUSTED SKILLS & TECHNOLOGIES RIBBON (Matching "Trusted by" in Reference 1) -->
-    <section class="py-12 border-y border-orange-500/10 bg-white/40 dark:bg-stone-900/30 backdrop-blur-sm">
+    <!-- TRUSTED SKILLS & TECHNOLOGIES RIBBON -->
+    <section class="py-10 border-y border-orange-500/10 bg-white/40 dark:bg-stone-900/30 backdrop-blur-sm">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500">Core Engineering Arsenal</span>
+        <div class="text-center mb-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500">Core Technologies</span>
         </div>
         <div class="tech-ribbon">
           <div class="tech-item"><i class="fa-brands fa-python text-blue-500 text-lg"></i><span>Python</span></div>
-          <div class="tech-item"><i class="fa-solid fa-brain text-orange-500 text-lg"></i><span>PyTorch</span></div>
           <div class="tech-item"><i class="fa-solid fa-robot text-emerald-500 text-lg"></i><span>LangGraph & LangChain</span></div>
+          <div class="tech-item"><i class="fa-solid fa-brain text-orange-500 text-lg"></i><span>PyTorch</span></div>
           <div class="tech-item"><i class="fa-solid fa-eye text-cyan-500 text-lg"></i><span>Computer Vision</span></div>
           <div class="tech-item"><i class="fa-solid fa-cube text-indigo-500 text-lg"></i><span>Django</span></div>
           <div class="tech-item"><i class="fa-solid fa-database text-amber-500 text-lg"></i><span>SQL</span></div>
-          <div class="tech-item"><i class="fa-solid fa-square-root-variable text-rose-500 text-lg"></i><span>Advanced Mathematics</span></div>
+          <div class="tech-item"><i class="fa-solid fa-square-root-variable text-rose-500 text-lg"></i><span>Mathematics</span></div>
           <div class="tech-item"><i class="fa-brands fa-js text-yellow-500 text-lg"></i><span>JavaScript</span></div>
+          <div class="tech-item"><i class="fa-brands fa-html5 text-orange-600 text-lg"></i><span>HTML & CSS</span></div>
           <div class="tech-item"><i class="fa-solid fa-chart-line text-purple-500 text-lg"></i><span>Scikit-learn</span></div>
         </div>
       </div>
     </section>
 
-    <!-- SELECTED WORK & WEBSITES BUILT TOGETHER (Touching card opens website directly) -->
+    <!-- WEBSITES BUILT TOGETHER (Rich Photos, Real Logos & Instant Touch Navigation) -->
     <section id="work" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
       
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">SELECTED WORK & LIVE WEBSITES</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PORTFOLIO WORK</span>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-            Real Websites & Intelligent Systems. <br class="hidden sm:inline" />Touch any card to visit.
+            Websites We Built Together
           </h2>
+          <p class="text-stone-500 dark:text-stone-400 mt-2 text-sm sm:text-base">
+            Touch any website card to visit the live platform directly.
+          </p>
         </div>
         <a href="https://github.com/imranbeyan162-collab" target="_blank" rel="noopener noreferrer" class="btn-outline-pill self-start md:self-auto text-sm">
-          <span>View all on GitHub</span>
+          <span>View GitHub Repositories</span>
           <i class="fa-brands fa-github text-base"></i>
         </a>
       </div>
 
-      <!-- Projects 3-Card Responsive Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Featured Websites Grid with Real Photos & Official Logos -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
         
-        <!-- Live Website 1: Zola Furniture -->
-        <a href="https://zola-furniture.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <!-- Visual Mockup Canvas -->
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-200 dark:from-stone-800 dark:to-amber-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-amber-700 dark:text-amber-400 shadow-sm flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Live Website
-                </span>
-                <i class="fa-solid fa-couch text-amber-600 text-lg"></i>
-              </div>
-              <!-- Simulated Furniture E-Commerce -->
-              <div class="space-y-2 z-10 font-mono text-[11px] text-stone-800 dark:text-stone-200">
-                <div class="p-2 rounded-xl bg-white/90 dark:bg-stone-900/90 shadow-sm flex items-center justify-between">
-                  <span class="font-bold">🛋️ Modern Living Collection</span>
-                  <span class="text-orange-600 font-bold">In Stock</span>
-                </div>
-                <div class="p-1.5 rounded-lg bg-white/70 dark:bg-stone-900/70 text-[10px] text-stone-600 dark:text-stone-300 flex justify-between">
-                  <span>zola-furniture.vercel.app</span>
-                  <span class="text-emerald-600 font-semibold">200 OK</span>
-                </div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <i class="fa-solid fa-arrow-up-right-from-square text-orange-500"></i>
-                <span>Touch to Open Live Website</span>
-              </div>
+        <!-- Live Website 1: Aalam Media (With Official Logo and Media Photo) -->
+        <a href="https://aalam-media.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl overflow-hidden group cursor-pointer block hover:border-orange-500 transition-all border border-stone-200/80 dark:border-stone-800 shadow-lg">
+          <!-- Real Website Image Banner -->
+          <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-900">
+            <img src="assets/images/aalam-preview.jpg" alt="Aalam Media Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+            
+            <!-- Real Official Aalam Media Logo Overlay -->
+            <div class="absolute top-5 left-5 flex items-center gap-3 bg-stone-950/80 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-white/10 shadow-lg">
+              <img src="assets/images/aalam-emblem.png" alt="Aalam Media Logo" class="w-8 h-8 rounded-full object-cover" />
+              <span class="font-heading font-extrabold text-sm text-white tracking-wide">Aalam Media</span>
             </div>
 
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Zola Furniture</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Modern furniture catalog and e-commerce platform built with responsive design, fluid animations, item collections, and blazing-fast loading speeds on Vercel.
-            </p>
+            <!-- Live URL Badge -->
+            <div class="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/90 text-white text-xs font-bold shadow-md">
+              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <span>Live Website</span>
+            </div>
+
+            <!-- Bottom Title on Image -->
+            <div class="absolute bottom-5 left-5 right-5 flex justify-between items-end">
+              <div>
+                <span class="text-xs font-mono uppercase tracking-wider text-orange-400 font-bold block mb-1">Broadcasting & Content Platform</span>
+                <h3 class="text-2xl font-bold font-heading text-white">aalam-media.vercel.app</h3>
+              </div>
+              <div class="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-md">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </div>
+            </div>
           </div>
 
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">JavaScript • HTML/CSS • Vercel</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
+          <!-- Description and Tech Stack -->
+          <div class="p-6 sm:p-8">
+            <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+              Digital broadcasting and multimedia journalism platform designed for rich content streaming, dynamic storytelling, and interactive reader engagement.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-200/60 dark:border-stone-800">
+              <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Next.js / React • TypeScript • Vercel</span>
+              <span class="text-xs font-bold text-orange-600 dark:text-orange-400 flex items-center gap-1 group-hover:underline">
+                <span>Touch to Open</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
             </div>
           </div>
         </a>
 
-        <!-- Live Website 2: Aalam Media -->
-        <a href="https://aalam-media.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <!-- Visual Mockup Canvas -->
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-200 dark:from-stone-800 dark:to-rose-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-rose-700 dark:text-rose-400 shadow-sm flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Live Website
-                </span>
-                <i class="fa-solid fa-photo-film text-rose-600 text-lg"></i>
-              </div>
-              <!-- Simulated Media Platform UI -->
-              <div class="space-y-2 z-10 font-mono text-[11px] text-stone-800 dark:text-stone-200">
-                <div class="p-2 rounded-xl bg-white/90 dark:bg-stone-900/90 shadow-sm flex items-center justify-between">
-                  <span class="font-bold">🎬 Aalam Media Hub</span>
-                  <span class="text-rose-600 font-bold">Broadcasting</span>
-                </div>
-                <div class="p-1.5 rounded-lg bg-white/70 dark:bg-stone-900/70 text-[10px] text-stone-600 dark:text-stone-300 flex justify-between">
-                  <span>aalam-media.vercel.app</span>
-                  <span class="text-emerald-600 font-semibold">200 OK</span>
-                </div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <i class="fa-solid fa-arrow-up-right-from-square text-rose-500"></i>
-                <span>Touch to Open Live Website</span>
-              </div>
+        <!-- Live Website 2: Zola Furniture (With Real Luxury Furniture Photos) -->
+        <a href="https://zola-furniture.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl overflow-hidden group cursor-pointer block hover:border-orange-500 transition-all border border-stone-200/80 dark:border-stone-800 shadow-lg">
+          <!-- Real Website Image Banner -->
+          <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-900">
+            <img src="assets/images/zola-sofa.jpg" alt="Zola Furniture Luxury Sofa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+            
+            <!-- Zola Branding Overlay -->
+            <div class="absolute top-5 left-5 flex items-center gap-3 bg-stone-950/80 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-white/10 shadow-lg">
+              <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center font-bold text-sm">Z</div>
+              <span class="font-heading font-extrabold text-sm text-white tracking-wide">Zola Furniture</span>
             </div>
 
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Aalam Media</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Digital multimedia publishing platform for broadcast media, editorial content delivery, storytelling, and rich interactive audience engagement.
+            <!-- Live URL Badge -->
+            <div class="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/90 text-white text-xs font-bold shadow-md">
+              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <span>Live Website</span>
+            </div>
+
+            <!-- Bottom Title on Image -->
+            <div class="absolute bottom-5 left-5 right-5 flex justify-between items-end">
+              <div>
+                <span class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold block mb-1">E-Commerce & Interior Design</span>
+                <h3 class="text-2xl font-bold font-heading text-white">zola-furniture.vercel.app</h3>
+              </div>
+              <div class="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-md">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description and Tech Stack -->
+          <div class="p-6 sm:p-8">
+            <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+              Modern furniture catalog and e-commerce shopping experience featuring luxury collections, responsive image galleries, fluid animations, and fast static loading.
             </p>
-          </div>
-
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">JavaScript • Responsive UI • Vercel</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 3: Tracker Dashboard -->
-        <a href="https://github.com/imranbeyan162-collab/tracker" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <!-- Visual Mockup Canvas -->
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-indigo-100 to-purple-200 dark:from-stone-800 dark:to-indigo-950/50 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 dark:bg-stone-900/95 text-indigo-700 dark:text-indigo-400 shadow-sm flex items-center gap-1.5">
-                  <i class="fa-brands fa-github"></i>
-                  GitHub Project
-                </span>
-                <i class="fa-solid fa-chart-line text-indigo-600 text-lg"></i>
-              </div>
-              <!-- Simulated Tracker Dashboard -->
-              <div class="space-y-1.5 z-10 font-mono text-[10px] text-stone-700 dark:text-stone-300">
-                <div class="p-1.5 rounded-lg bg-white/90 dark:bg-stone-900/90 flex justify-between">
-                  <span>Tracking Metric: Tasks</span>
-                  <span class="text-indigo-600 font-bold">100% Completed</span>
-                </div>
-                <div class="p-1.5 rounded-lg bg-white/90 dark:bg-stone-900/90 flex justify-between">
-                  <span>Analytics Telemetry</span>
-                  <span class="text-emerald-600 font-bold">Synced</span>
-                </div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-600 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i>
-                <span>Touch to Open GitHub Repo</span>
-              </div>
-            </div>
-
-            <!-- Card Content -->
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Task & Activity Tracker</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Productivity tracking system engineered with clean HTML, CSS, and JavaScript. Designed for monitoring development goals, metrics, and routine milestones.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">HTML5 • JavaScript • Data UI</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 4: Autonomous Multi-Agent Orchestrator -->
-        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-orange-100 to-rose-100 dark:from-stone-800 dark:to-orange-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-orange-600 dark:text-orange-400 shadow-sm">AI Agents</span>
-                <i class="fa-solid fa-diagram-project text-stone-400"></i>
-              </div>
-              <div class="flex items-center justify-around py-4 z-10">
-                <div class="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-md flex items-center justify-center font-mono text-xs text-orange-600 font-bold border border-orange-200">Plan</div>
-                <div class="h-0.5 w-8 bg-orange-400"></div>
-                <div class="w-12 h-12 rounded-xl bg-orange-500 text-white shadow-md flex items-center justify-center font-mono text-xs font-bold">Tool</div>
-                <div class="h-0.5 w-8 bg-orange-400"></div>
-                <div class="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-md flex items-center justify-center font-mono text-xs text-emerald-600 font-bold border border-emerald-200">Eval</div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                <span>LangGraph State Graph Engine</span>
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Multi-Agent Autonomous Orchestrator</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Cyclic multi-agent architecture built with LangGraph & LangChain. Employs autonomous task decomposition, persistent memory checkpoints, dynamic tool routing, and automated self-reflection.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Python • LangGraph • LangChain</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 5: Neural Computer Vision & Perception -->
-        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-200 dark:from-stone-800 dark:to-emerald-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-emerald-700 dark:text-emerald-400 shadow-sm">Computer Vision</span>
-                <i class="fa-solid fa-camera text-stone-400"></i>
-              </div>
-              <div class="relative h-24 w-full flex items-center justify-center">
-                <div class="w-32 h-20 border-2 border-dashed border-emerald-500 rounded-lg bg-emerald-500/10 flex items-start justify-between p-1.5">
-                  <span class="text-[9px] font-mono bg-emerald-500 text-white px-1 rounded">Target: 99.4%</span>
-                  <span class="text-[9px] font-mono text-emerald-700 dark:text-emerald-300">60 FPS</span>
-                </div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                <span>PyTorch Custom CNN & Inference</span>
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Neural Computer Vision & Perception</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Deep convolutional neural network trained on PyTorch for high-speed spatial object detection, edge feature extraction, and real-time bounding box tracking with OpenCV.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">PyTorch • OpenCV • Scikit-learn</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 6: Scalable Full-Stack Django Platform -->
-        <a href="https://github.com/imranbeyan162-collab/imran17" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 flex flex-col justify-between group cursor-pointer block hover:border-orange-500 transition-all">
-          <div>
-            <div class="w-full h-52 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-200 dark:from-stone-800 dark:to-blue-950/40 p-5 flex flex-col justify-between relative overflow-hidden mb-6 border border-white/60 dark:border-white/5">
-              <div class="flex justify-between items-center z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 dark:bg-stone-900/90 text-blue-700 dark:text-blue-400 shadow-sm">Full-Stack & SQL</span>
-                <i class="fa-solid fa-server text-stone-400"></i>
-              </div>
-              <div class="space-y-1.5 z-10 font-mono text-[10px] text-stone-700 dark:text-stone-300">
-                <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
-                  <span>SELECT * FROM users</span>
-                  <span class="text-emerald-500 font-bold">200 OK</span>
-                </div>
-                <div class="p-1 rounded bg-white/80 dark:bg-stone-900/80 flex justify-between">
-                  <span>JOIN analytics ON id</span>
-                  <span class="text-blue-600">1.8ms</span>
-                </div>
-              </div>
-              <div class="text-[11px] font-mono text-stone-500 dark:text-stone-400 z-10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                <span>Django REST + Relational SQL</span>
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors flex items-center justify-between">
-              <span>Scalable Intelligence Web Platform</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-sm text-stone-400 group-hover:text-orange-600"></i>
-            </h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
-              Enterprise-grade Django architecture powered by optimized SQL schemas, indexed joins, and REST APIs communicating seamlessly with reactive JavaScript frontends.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-stone-200/50 dark:border-stone-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">Django • SQL • JS • HTML/CSS</span>
-            <div class="project-arrow-btn">
-              <i class="fa-solid fa-arrow-right text-sm"></i>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-200/60 dark:border-stone-800">
+              <span class="text-xs font-mono text-stone-500 dark:text-stone-400 font-medium">JavaScript • HTML5 / CSS3 • Vercel</span>
+              <span class="text-xs font-bold text-orange-600 dark:text-orange-400 flex items-center gap-1 group-hover:underline">
+                <span>Touch to Open</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
             </div>
           </div>
         </a>
 
       </div>
 
+      <!-- Secondary Project: Task & Activity Tracker -->
+      <a href="https://github.com/imranbeyan162-collab/tracker" target="_blank" rel="noopener noreferrer" class="project-card glass-panel rounded-3xl p-6 sm:p-8 group cursor-pointer block hover:border-orange-500 transition-all border border-stone-200/80 dark:border-stone-800">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 text-xs font-bold">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub Repository</span>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-stone-900 dark:text-stone-100 group-hover:text-orange-600 transition-colors">
+              Task & Activity Tracker System
+            </h3>
+            <p class="text-stone-600 dark:text-stone-400 text-sm max-w-2xl leading-relaxed">
+              Productivity tracking tool built with clean HTML, CSS, and JavaScript for monitoring routines, tracking workflow milestones, and structured data visualization.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 self-start md:self-auto">
+            <span class="text-xs font-mono text-stone-500 font-medium">HTML • CSS • JavaScript</span>
+            <div class="project-arrow-btn">
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
     </section>
 
-    <!-- INTERACTIVE AI AGENT & MATH LAB (What makes this website truly special!) -->
-    <section id="agent-lab" class="py-20 bg-stone-100/60 dark:bg-stone-900/50 border-y border-orange-500/10">
+    <!-- ABOUT ME & JOURNEY (Authentic, truthful bio without self-made claims) -->
+    <section id="about" class="py-24 bg-stone-100/50 dark:bg-stone-900/30 border-y border-orange-500/10">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">INTERACTIVE AI & PROBLEM SOLVING LAB</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-            See How My Agents Think & Execute
-          </h2>
-          <p class="text-stone-600 dark:text-stone-400 mt-3 text-sm sm:text-base">
-            Test live simulated LangGraph agent decision-making workflows and algorithmic math solvers directly in your browser.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Left: LangGraph Interactive Execution Flow -->
-          <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
-            <div>
-              <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
-                <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-orange-500"></span>
-                  <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">LangGraph Execution Flow</h3>
-                </div>
-                
-                <div class="flex items-center gap-2">
-                  <label for="agent-workflow-select" class="text-xs font-semibold text-stone-500">Preset:</label>
-                  <select id="agent-workflow-select" class="text-xs font-medium rounded-lg bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-2.5 py-1.5 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-1 focus:ring-orange-500">
-                    <option value="math">Mathematical Proof & Eigenvalues</option>
-                    <option value="vision">Computer Vision Edge Stream</option>
-                    <option value="agentic">Database SQL Multi-Agent Query</option>
-                  </select>
-                </div>
+          <!-- Left: Imran's Clean Portrait -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90 dark:border-stone-800 aspect-[4/5] bg-stone-200">
+              <img src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <div class="text-xs font-mono uppercase tracking-wider text-orange-400 font-bold mb-1">STEM Student & Builder</div>
+                <div class="font-heading font-bold text-2xl">Imran Beyan</div>
+                <p class="text-xs text-stone-300">Passionate about mathematics and solving problems.</p>
               </div>
-
-              <!-- Interactive Node Graph Visual -->
-              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 mb-6 text-center">
-                <div class="agent-step-node agent-node">
-                  <div class="text-xs font-bold text-orange-600">01. Ingest</div>
-                  <div class="text-[11px] text-stone-500">User Query</div>
-                </div>
-                <div class="agent-step-node agent-node">
-                  <div class="text-xs font-bold text-orange-600">02. Plan</div>
-                  <div class="text-[11px] text-stone-500">LangChain</div>
-                </div>
-                <div class="agent-step-node agent-node">
-                  <div class="text-xs font-bold text-orange-600">03. Tool</div>
-                  <div class="text-[11px] text-stone-500">Py/PyTorch</div>
-                </div>
-                <div class="agent-step-node agent-node">
-                  <div class="text-xs font-bold text-orange-600">04. Critic</div>
-                  <div class="text-[11px] text-stone-500">Reflection</div>
-                </div>
-                <div class="agent-step-node agent-node col-span-2 sm:col-span-1">
-                  <div class="text-xs font-bold text-emerald-600">05. Output</div>
-                  <div class="text-[11px] text-stone-500">Final State</div>
-                </div>
-              </div>
-
-              <!-- Terminal Output Stream -->
-              <div class="rounded-2xl bg-stone-950 p-4 font-mono text-stone-300 text-xs h-48 overflow-y-auto space-y-2 border border-stone-800" id="agent-logs">
-                <div class="text-stone-500 italic">Select a workflow above and click "Run Agent Graph" to inspect the live execution trace...</div>
-              </div>
-            </div>
-
-            <div class="mt-6 flex justify-end">
-              <button id="run-agent-btn" class="btn-terracotta text-sm py-2 px-5 cursor-pointer">
-                <span>▶ Run Agent Graph</span>
-              </button>
             </div>
           </div>
 
-          <!-- Right: Mathematical Problem Solving Demo -->
-          <div class="lg:col-span-5 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <!-- Right: Authentic Story & Skills -->
+          <div class="lg:col-span-7 space-y-6">
             <div>
-              <div class="flex items-center gap-2 mb-6">
-                <i class="fa-solid fa-square-root-variable text-orange-500 text-lg"></i>
-                <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Special Math & Problem Solver</h3>
-              </div>
-
-              <p class="text-xs text-stone-600 dark:text-stone-400 mb-4 leading-relaxed">
-                As a student in a school for gifted minds, mathematics forms the bedrock of my engineering approach. Test algorithmic solutions below:
-              </p>
-
-              <div class="space-y-3 mb-4">
-                <label for="problem-type" class="text-xs font-semibold text-stone-700 dark:text-stone-300 block">Select Mathematical Problem:</label>
-                <select id="problem-type" class="w-full text-xs font-medium rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 p-2.5 text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-1 focus:ring-orange-500">
-                  <option value="quad">Quadratic Roots & Extremum Discovery</option>
-                  <option value="fib">Fast Matrix Exponentiation Fibonacci O(log n)</option>
-                  <option value="vision_filter">Computer Vision Sobel 3x3 Edge Kernel</option>
-                </select>
-              </div>
-
-              <div id="math-result" class="p-4 rounded-2xl bg-white/80 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 min-h-[140px] flex items-center justify-center text-center">
-                <span class="text-xs text-stone-400">Click "Solve Equation" to compute step-by-step breakdown.</span>
-              </div>
+              <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">ABOUT ME</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+                Special school student driven by mathematics & artificial intelligence.
+              </h2>
             </div>
 
-            <div class="mt-6 flex justify-end">
-              <button id="math-solve-btn" class="btn-outline-pill text-sm py-2 px-5 cursor-pointer">
-                <span>Solve Equation</span>
-                <i class="fa-solid fa-calculator text-xs"></i>
-              </button>
+            <p class="text-stone-600 dark:text-stone-300 text-base leading-relaxed">
+              I am a student at a specialized school, deeply interested in mathematics and solving intricate problems. For me, coding is the bridge between pure mathematical reasoning and building real, useful software that people can touch and interact with.
+            </p>
+
+            <p class="text-stone-600 dark:text-stone-300 text-base leading-relaxed">
+              I focus heavily on AI agents and reasoning frameworks like <strong class="text-stone-900 dark:text-stone-100">LangChain and LangGraph</strong>, deep learning and neural models using <strong class="text-stone-900 dark:text-stone-100">PyTorch and Computer Vision</strong>, machine learning algorithms with <strong class="text-stone-900 dark:text-stone-100">Scikit-learn</strong>, and production web engineering with <strong class="text-stone-900 dark:text-stone-100">Django, SQL, JavaScript, HTML, and CSS</strong>.
+            </p>
+
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn-terracotta text-sm">
+                <span>Connect on LinkedIn</span>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="btn-outline-pill text-sm">
+                <span>YouTube Channel</span>
+                <i class="fa-brands fa-youtube text-red-500"></i>
+              </a>
             </div>
+
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- ABOUT ME & JOURNEY (Incorporating Reference 2 style metrics & bio) -->
-    <section id="about" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: Styled Portrait with Decorative Badges -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 dark:border-stone-800 aspect-[4/5] bg-stone-200">
-            <img src="assets/images/imran-about.png" alt="Imran Beyan" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <div class="text-xs font-mono uppercase tracking-wider text-orange-400 font-bold mb-1">Passionate Thinker</div>
-              <div class="font-heading font-bold text-xl">Imran Beyan</div>
-              <p class="text-xs text-stone-300">Turning curiosity and mathematics into code.</p>
-            </div>
-          </div>
-
-          <!-- Highlight Metric Badge (Reference 2 style) -->
-          <div class="absolute -top-4 -right-4 glass-panel rounded-2xl p-4 shadow-xl border border-white/90">
-            <div class="text-2xl font-extrabold font-heading text-orange-600 dark:text-orange-400">100%</div>
-            <div class="text-[11px] font-semibold text-stone-600 dark:text-stone-300">Problem Dedication</div>
-          </div>
-        </div>
-
-        <!-- Right: Story, Values & Skills breakdown -->
-        <div class="lg:col-span-7 space-y-6">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">ABOUT ME</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-              Special school student with a deep passion for mathematics & autonomous intelligence.
-            </h2>
-          </div>
-
-          <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
-            I am a student at a specialized school for gifted problem-solvers. What drives me every day is the elegance of mathematics and the immense frontier of Artificial Intelligence. I don't just write code — I seek first-principles understanding: from the calculus under gradient descent to cyclic agent graphs that reason about human intent.
-          </p>
-
-          <p class="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
-            Over the past years, I have engineered neural models with PyTorch, built computer vision pipelines that process real-time streams, orchestrated multi-agent reasoning chains using LangChain & LangGraph, and engineered resilient database-backed web architectures using Django, JavaScript, and SQL.
-          </p>
-
-          <!-- Stat Counters (Reference 2 style) -->
-          <div class="grid grid-cols-3 gap-4 py-4 border-y border-stone-200/60 dark:border-stone-800/80">
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">5+</div>
-              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">Core Tech Stacks</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">100+</div>
-              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">Problems Solved</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-stone-900 dark:text-stone-100">10+</div>
-              <div class="text-xs text-stone-500 dark:text-stone-400 font-medium">AI & Web Projects</div>
-            </div>
-          </div>
-
-          <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn-terracotta text-sm">
-              <span>Connect on LinkedIn</span>
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="btn-outline-pill text-sm">
-              <span>YouTube Channel</span>
-              <i class="fa-brands fa-youtube text-red-500"></i>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TECHNICAL SKILLS BREAKDOWN (Matching Reference 2 Progress Bars & Cards) -->
-    <section id="skills" class="py-20 bg-stone-100/40 dark:bg-stone-900/30 border-y border-orange-500/10">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PROFICIENCY MATRIX</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-            Skills Mastered & In Action
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <!-- Skill Card 1: AI & Agent Frameworks -->
-          <div class="glass-panel rounded-3xl p-6 space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-network-wired"></i>
-              </div>
-              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">AI Agents & LLMs</h3>
-            </div>
-            <div class="space-y-3 pt-2">
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>LangGraph & LangChain</span>
-                  <span class="text-orange-600">92%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 92%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>Autonomous Agent Workflows</span>
-                  <span class="text-orange-600">90%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>RAG & Structured Outputs</span>
-                  <span class="text-orange-600">88%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skill Card 2: Deep Learning & Vision -->
-          <div class="glass-panel rounded-3xl p-6 space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-eye"></i>
-              </div>
-              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Machine Learning & Vision</h3>
-            </div>
-            <div class="space-y-3 pt-2">
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>PyTorch & Neural Networks</span>
-                  <span class="text-orange-600">88%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>Computer Vision & OpenCV</span>
-                  <span class="text-orange-600">85%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>Scikit-learn & Statistical ML</span>
-                  <span class="text-orange-600">90%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skill Card 3: Backend & Databases -->
-          <div class="glass-panel rounded-3xl p-6 space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-database"></i>
-              </div>
-              <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Backend & Web Stack</h3>
-            </div>
-            <div class="space-y-3 pt-2">
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>SQL & Relational Schemas</span>
-                  <span class="text-orange-600">92%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 92%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>Python & Django</span>
-                  <span class="text-orange-600">88%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 88%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-xs font-semibold mb-1">
-                  <span>JavaScript, HTML5 & CSS3</span>
-                  <span class="text-orange-600">86%</span>
-                </div>
-                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 86%;"></div></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PHOTO GALLERY SECTION (Showcasing all 5 user uploaded photos with touch feedback) -->
-    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PHOTO GALLERY</span>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
-            Moments & Perspectives
-          </h2>
-        </div>
-        <p class="text-sm text-stone-500 dark:text-stone-400 max-w-md">
-          A glimpse into my life as a student, researcher, and builder. Touch any photo to set it as your main avatar!
+    <!-- TECHNICAL SKILLS (Clean Cards - NO arbitrary percentages) -->
+    <section id="skills" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">TECHNICAL EXPERTISE</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+          Tools, Frameworks & Core Foundations
+        </h2>
+        <p class="text-stone-500 dark:text-stone-400 mt-2 text-sm">
+          Technologies and domains I actively engineer and build solutions with.
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Image 1 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-hero.png', this)">
-          <img src="assets/images/imran-hero.png" alt="Imran Beyan in city" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-bold">City Architecture</span>
-            <span class="text-[10px] text-orange-300">Touch to Select</span>
+        <!-- Card 1: AI Agents & LLMs -->
+        <div class="glass-panel rounded-3xl p-6 space-y-4 border border-stone-200/80 dark:border-stone-800">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">AI Agents & LLMs</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+            Constructing autonomous multi-agent graphs, memory states, dynamic tool-calling, and reasoning pipelines.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded-lg bg-orange-100/80 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300 text-xs font-semibold">LangGraph</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-100/80 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300 text-xs font-semibold">LangChain</span>
+            <span class="px-2.5 py-1 rounded-lg bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">AI Agents</span>
           </div>
         </div>
 
-        <!-- Image 2 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-about.png', this)">
-          <img src="assets/images/imran-about.png" alt="Imran Beyan casual pose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-bold">Casual & Confident</span>
-            <span class="text-[10px] text-orange-300">Touch to Select</span>
+        <!-- Card 2: Deep Learning & Vision -->
+        <div class="glass-panel rounded-3xl p-6 space-y-4 border border-stone-200/80 dark:border-stone-800">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Machine Learning & Vision</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+            Developing deep convolutional architectures, feature extraction models, and computer vision pipelines.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-100/80 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 text-xs font-semibold">PyTorch</span>
+            <span class="px-2.5 py-1 rounded-lg bg-cyan-100/80 dark:bg-cyan-950/60 text-cyan-800 dark:text-cyan-300 text-xs font-semibold">Computer Vision</span>
+            <span class="px-2.5 py-1 rounded-lg bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">Scikit-learn</span>
           </div>
         </div>
 
-        <!-- Image 3 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p1.png', this)">
-          <img src="assets/images/imran-p1.png" alt="Imran Beyan portrait 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-bold">Athletic Training</span>
-            <span class="text-[10px] text-orange-300">Touch to Select</span>
+        <!-- Card 3: Backend & Full Stack -->
+        <div class="glass-panel rounded-3xl p-6 space-y-4 border border-stone-200/80 dark:border-stone-800">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Backend & Web</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+            Architecting robust web servers, relational database models, fast queries, and interactive web clients.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-100/80 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-semibold">Django</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-100/80 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-semibold">SQL</span>
+            <span class="px-2.5 py-1 rounded-lg bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-lg bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">HTML & CSS</span>
           </div>
         </div>
 
-        <!-- Image 4 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p2.jpg', this)">
-          <img src="assets/images/imran-p2.jpg" alt="Imran Beyan Manchester City Jersey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-bold">Sports & Energy</span>
-            <span class="text-[10px] text-orange-300">Touch to Select</span>
+        <!-- Card 4: Languages & Math Foundations -->
+        <div class="glass-panel rounded-3xl p-6 space-y-4 border border-stone-200/80 dark:border-stone-800">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-stone-900 dark:text-stone-100">Math & Problem Solving</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">
+            Analytical thinking, linear algebra, calculus, discrete mathematics, and algorithmic problem-solving.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-100/80 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 text-xs font-semibold">Mathematics</span>
+            <span class="px-2.5 py-1 rounded-lg bg-blue-100/80 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 text-xs font-semibold">Python</span>
+            <span class="px-2.5 py-1 rounded-lg bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">Problem Solving</span>
           </div>
         </div>
 
-        <!-- Image 5 -->
-        <div class="glass-panel rounded-2xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-xl transition-all" onclick="setAvatar('assets/images/imran-p3.png', this)">
-          <img src="assets/images/imran-p3.png" alt="Imran Beyan smile portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
-            <span class="text-xs font-bold">Friendly Smile</span>
-            <span class="text-[10px] text-orange-300">Touch to Select</span>
+      </div>
+
+    </section>
+
+    <!-- PHOTO GALLERY SECTION (Only high quality portraits - dark photo removed) -->
+    <section id="gallery" class="py-20 bg-stone-100/40 dark:bg-stone-900/30 border-y border-orange-500/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2 block font-heading">PHOTO GALLERY</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100">
+              Moments & Perspectives
+            </h2>
           </div>
+          <p class="text-sm text-stone-500 dark:text-stone-400 max-w-md">
+            Touch any portrait to select it as your main website avatar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          
+          <!-- Image 1 -->
+          <div class="glass-panel rounded-3xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-2xl transition-all" onclick="setAvatar('assets/images/imran-hero.png', this)">
+            <img src="assets/images/imran-hero.png" alt="Imran Beyan in city" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-xs font-bold">City Architecture</span>
+              <span class="text-[10px] text-orange-300">Touch to Select</span>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="glass-panel rounded-3xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-2xl transition-all" onclick="setAvatar('assets/images/imran-p1.png', this)">
+            <img src="assets/images/imran-p1.png" alt="Imran Beyan purple collar portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-xs font-bold">Focus & Precision</span>
+              <span class="text-[10px] text-orange-300">Touch to Select</span>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="glass-panel rounded-3xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-2xl transition-all" onclick="setAvatar('assets/images/imran-p2.jpg', this)">
+            <img src="assets/images/imran-p2.jpg" alt="Imran Beyan Manchester City Jersey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-xs font-bold">Energy & Sports</span>
+              <span class="text-[10px] text-orange-300">Touch to Select</span>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="glass-panel rounded-3xl overflow-hidden aspect-[3/4] group cursor-pointer relative shadow-md hover:shadow-2xl transition-all" onclick="setAvatar('assets/images/imran-p3.png', this)">
+            <img src="assets/images/imran-p3.png" alt="Imran Beyan collared smile portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+              <span class="text-xs font-bold">Friendly Smile</span>
+              <span class="text-[10px] text-orange-300">Touch to Select</span>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
     <!-- YOUTUBE & SOCIAL HUB (Touching card takes them directly to YouTube / X) -->
-    <section class="py-16 bg-white/50 dark:bg-stone-900/40 border-t border-orange-500/10">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- YouTube Big Touchable Banner -->
-          <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-red-500 hover:shadow-2xl transition-all">
-            <div class="flex items-center justify-between mb-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold">
-                <i class="fa-brands fa-youtube text-base"></i>
-                <span>YouTube Creator Channel</span>
-              </div>
-              <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-play text-xs"></i>
-              </div>
+    <section class="py-16 max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- YouTube Big Touchable Banner -->
+        <a href="https://youtube.com/@techwithimran17" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-red-500 hover:shadow-2xl transition-all border border-stone-200/80 dark:border-stone-800">
+          <div class="flex items-center justify-between mb-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs font-bold">
+              <i class="fa-brands fa-youtube text-base"></i>
+              <span>YouTube Channel</span>
             </div>
-            <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-red-600 transition-colors">
-              @techwithimran17
-            </h3>
-            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
-              Watch step-by-step tutorials on LangGraph, PyTorch computer vision, and mathematical problem-solving. Touch anywhere on this card to open YouTube.
-            </p>
-            <div class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 group-hover:underline">
-              <span>Touch to Visit YouTube Channel</span>
-              <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-play text-xs"></i>
             </div>
-          </a>
-
-          <!-- X / Twitter Big Touchable Banner -->
-          <a href="https://x.com/BeyanImran57496" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-stone-800 dark:hover:border-stone-400 hover:shadow-2xl transition-all">
-            <div class="flex items-center justify-between mb-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-bold">
-                <i class="fa-brands fa-x-twitter text-base"></i>
-                <span>X / Twitter Feed</span>
-              </div>
-              <div class="w-10 h-10 rounded-full bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                <i class="fa-brands fa-x-twitter text-sm"></i>
-              </div>
-            </div>
-            <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
-              @BeyanImran57496
-            </h3>
-            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
-              Real-time thoughts on autonomous AI agents, mathematical conjectures, and daily engineering breakthroughs. Touch anywhere on this card to open X.
-            </p>
-            <div class="inline-flex items-center gap-2 text-sm font-bold text-stone-800 dark:text-stone-200 group-hover:underline">
-              <span>Touch to Follow on X / Twitter</span>
-              <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIAL / PHILOSOPHY QUOTE BANNER (Exact reproduction from Reference 1) -->
-    <section class="py-20 max-w-5xl mx-auto px-6 lg:px-12">
-      <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-orange-500/20 shadow-xl relative">
-        <div class="text-5xl text-orange-500/30 font-serif leading-none mb-4">“</div>
-        <blockquote class="text-xl sm:text-2xl font-heading font-semibold text-stone-800 dark:text-stone-200 leading-snug mb-8">
-          Mathematics is the purest form of problem-solving. When you connect rigorous mathematical thinking with modern AI agents and deep neural networks, there are no limits to the challenges you can solve.
-        </blockquote>
-        <div class="flex items-center gap-4">
-          <img src="assets/images/imran-hero.png" alt="Imran Beyan" class="w-12 h-12 rounded-full object-cover border-2 border-orange-500" />
-          <div>
-            <div class="font-bold text-sm text-stone-900 dark:text-stone-100">Imran Beyan</div>
-            <div class="text-xs text-stone-500 dark:text-stone-400">Special STEM School Student & AI Engineer</div>
           </div>
-        </div>
+          <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-red-600 transition-colors">
+            @techwithimran17
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+            Tutorials on programming, building AI agents with LangGraph, computer vision with PyTorch, and math problem-solving. Touch anywhere on this card to open YouTube.
+          </p>
+          <div class="inline-flex items-center gap-2 text-sm font-bold text-red-600 dark:text-red-400 group-hover:underline">
+            <span>Touch to Visit YouTube Channel</span>
+            <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- X / Twitter Big Touchable Banner -->
+        <a href="https://x.com/BeyanImran57496" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl p-8 group cursor-pointer block hover:border-stone-800 dark:hover:border-stone-400 hover:shadow-2xl transition-all border border-stone-200/80 dark:border-stone-800">
+          <div class="flex items-center justify-between mb-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-bold">
+              <i class="fa-brands fa-x-twitter text-base"></i>
+              <span>X / Twitter</span>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-x-twitter text-sm"></i>
+            </div>
+          </div>
+          <h3 class="text-2xl font-extrabold font-heading text-stone-900 dark:text-stone-100 mb-2 group-hover:text-orange-600 transition-colors">
+            @BeyanImran57496
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
+            Real-time thoughts on AI agent systems, mathematical ideas, and software updates. Touch anywhere on this card to open X.
+          </p>
+          <div class="inline-flex items-center gap-2 text-sm font-bold text-stone-800 dark:text-stone-200 group-hover:underline">
+            <span>Touch to Follow on X</span>
+            <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition-transform"></i>
+          </div>
+        </a>
+
       </div>
     </section>
 
-    <!-- CONTACT & FOOTER (Matching Reference 1 Bottom Layout) -->
+    <!-- CONTACT & FOOTER -->
     <section id="contact" class="py-20 border-t border-orange-500/10 bg-stone-50 dark:bg-stone-950">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         
@@ -968,11 +635,11 @@
           <!-- Left Column: Friendly Callout -->
           <div class="lg:col-span-6 space-y-6">
             <h2 class="text-4xl sm:text-5xl font-extrabold font-heading text-stone-900 dark:text-stone-100 tracking-tight leading-tight">
-              Let's create something <br />
-              <span class="text-orange-600 dark:text-orange-400">amazing together.</span>
+              Let's build something <br />
+              <span class="text-orange-600 dark:text-orange-400">great together.</span>
             </h2>
             <p class="text-stone-600 dark:text-stone-400 text-base max-w-md">
-              Whether you want to discuss multi-agent AI research, collaborate on a project, or just talk mathematics and algorithms, my inbox is always open.
+              Whether you want to collaborate on AI agents, discuss mathematics, or start a new project, feel free to reach out.
             </p>
 
             <div class="space-y-3 pt-2">
@@ -982,11 +649,11 @@
               </div>
               <div class="flex items-center gap-3 text-stone-700 dark:text-stone-300 text-sm">
                 <i class="fa-solid fa-location-dot text-orange-500"></i>
-                <span>Special STEM School • Global Remote Collaboration</span>
+                <span>Special School STEM Student</span>
               </div>
             </div>
 
-            <!-- Social Links Icons (Touching each takes them directly there) -->
+            <!-- Social Links Icons (Directly Touchable) -->
             <div class="pt-4 flex items-center gap-4">
               <a href="https://www.linkedin.com/in/imran-m-7502403ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-12 h-12 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-300 hover:text-orange-600 hover:border-orange-500 transition-all shadow-sm cursor-pointer">
                 <i class="fa-brands fa-linkedin-in text-lg"></i>
@@ -1010,15 +677,15 @@
               <form id="contact-form" class="space-y-4">
                 <div>
                   <label for="sender-name" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Name</label>
-                  <input type="text" id="sender-name" required placeholder="Alex Morgan" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
+                  <input type="text" id="sender-name" required placeholder="Your Name" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
                 </div>
                 <div>
                   <label for="sender-email" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Email</label>
-                  <input type="email" id="sender-email" required placeholder="alex@example.com" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
+                  <input type="email" id="sender-email" required placeholder="you@example.com" class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50" />
                 </div>
                 <div>
                   <label for="sender-message" class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Message</label>
-                  <textarea id="sender-message" required rows="4" placeholder="Hello Imran, I'd love to connect regarding..." class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50"></textarea>
+                  <textarea id="sender-message" required rows="4" placeholder="Hello Imran, I'd like to get in touch regarding..." class="w-full text-sm rounded-xl bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-3 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-orange-500/50"></textarea>
                 </div>
                 
                 <div id="contact-alert" class="hidden"></div>
@@ -1035,7 +702,7 @@
 
         <!-- Sub-footer copyright -->
         <div class="pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-400">
-          <div>© 2026 Imran Beyan. Crafted with precision, mathematics & passion.</div>
+          <div>© 2026 Imran Beyan. All rights reserved.</div>
           <div class="flex items-center gap-6">
             <a href="#hero" class="hover:underline">Back to Top ↑</a>
           </div>
